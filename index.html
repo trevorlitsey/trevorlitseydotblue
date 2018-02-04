@@ -78,7 +78,7 @@ div {
 			const index = Math.floor(Math.random() * links.length);
 			console.log(links[index]);
 			
-			window.location.href = links[index];
+			window.location.href = `pages${links[index]}`;
 		}
 
 		button.addEventListener('click', handleClick);
