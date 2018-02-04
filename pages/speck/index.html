@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>
+	<title> __ speck </title>
+</head>
+<body>
+	<div class="wrapper">
+			<canvas id="draw" width="100%" height="100%"></canvas>
+	</div>
+				
+	<style>
+
+		html, body {
+			margin:0;
+			height: 100%;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+		}
+
+		.wrapper {
+			margin:0 auto;
+			height: 100vh;
+			width: 100vw;
+		}
+
+	</style>
+
+	<Script>
+
+		const canvas = document.querySelector('#draw');
+		const ctx = canvas.getContext('2d');
+		const currentPicture = [];
+		let blurIndex = 2;
+		let stop = false;
+		let blur = false;
+
+		function getRandomBlue() {
+			const hue = (Math.random() * 15) + 40;
+			return `hsl(221, 50%, ${hue}%)`;
+		}
+
+		function getRandomPoints() {
+			const x = Math.random() * window.innerWidth;
+			const y = Math.random() * window.innerHeight;
+			return [x, y];
+		}
+
+		function draw () {
+
+			const points = getRandomPoints();
+			const [fromX, fromY] = points;
+			const [toX, toY] = points;
+
+			// draw point
+			ctx.strokeStyle = getRandomBlue();
+			ctx.beginPath();
+			ctx.moveTo(fromX, fromY);
+			ctx.lineTo(toX + .01, toY + .01);
+			ctx.stroke();
+			currentPicture.push([[fromX, fromY], [toX, toY]]);
+			
+		}
+
+		function beginDraw() {
+			const interval = setInterval(function() {
+				if (stop) { clearInterval(interval) }
+				for (i = 0; i < 50; i++) {
+					draw();
+				}
+			}, .5)
+		}
+
+		function stopDraw() {
+			stop = !stop;
+			if (!stop) { beginDraw(); }
+		}
+
+		function toggleBlur() {
+			e.preventDefault();
+			!blur ? canvas.style.filter = `blur(${blurIndex}px)` : canvas.style.filter = `blur(${blurIndex}px)`;
+			blurIndex += 2;
+			blur = !blur;
+		}
+
+		function resize() {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.lineJoin = 'round';
+			ctx.lineCap = 'round';
+			ctx.lineWidth = 5;
+			for (i = 0; i < 500; i++) {
+				const points = getRandomPoints();
+				currentPicture.push([points, points]);
+			}
+			currentPicture.forEach(point => {
+				ctx.strokeStyle = getRandomBlue();
+
+				ctx.beginPath();
+				// start from
+				ctx.moveTo(point[0][0], point[0][1]);
+				// go to
+				ctx.lineTo(point[1][0], point[1][1]);
+				ctx.closePath();
+				ctx.stroke();
+
+			});
+			beginDraw();
+		}
+
+		window.addEventListener('load', resize);
+		window.addEventListener('click', toggleBlur);
+		window.addEventListener('touchstart', toggleBlur);
+		window.addEventListener('resize', resize);
+	
+	</script>
+
+</body>
+</html>
+
+
