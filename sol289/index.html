@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<script src="pressure.js"></script>
-	<title>pressure</title>
+	<script src="../pressure.js"></script>
+	<title>__ sol 289</title>
 </head>
 
 <body>
@@ -31,8 +31,8 @@
 
 		const canvas = document.querySelector('canvas');
 		const ctx = canvas.getContext('2d');
-		let last = 0;
 		let currentPicture = [];
+		let full = [];
 
 		// starting points from
 		const p = {};
@@ -54,15 +54,18 @@
 		}
 
 		const resetPointCounts = () => {
-			p.middle = 0;
-			p.upSide = 0;
-			p.rightSide = 0;
-			p.downSide = 0;
-			p.leftSide = 0;
-			p.upRight = 0;
-			p.downRight = 0;
-			p.downLeft = 0;
-			p.upLeft = 0;
+			pointCounts.middle = 0;
+			pointCounts.upSide = 0;
+			pointCounts.rightSide = 0;
+			pointCounts.downSide = 0;
+			pointCounts.leftSide = 0;
+			pointCounts.upRight = 0;
+			pointCounts.downRight = 0;
+			pointCounts.downLeft = 0;
+			pointCounts.upLeft = 0;
+			currentPicture = [];
+			full = [];
+			howMany = 0;
 		}
 
 		const getRandomBlue = () => {
@@ -70,16 +73,28 @@
 			return `hsl(221, 50%, ${hue}%)`;
 		}
 
+		const pushToFullIfNeeded = (key) => {
+			if ((key === 'middle' && pointCounts[key] === 24) || (key !== 'middle' && pointCounts[key] === 12)
+				&& !full.includes(key)) {
+				full.push(key)
+			}
+		}
+
 		const morePointsAvail = (key) => {
-			if (key === 'middle' && pointCounts[key] >= 24) return false;
-			else if (key !== 'middle' && pointCounts[key] >= 12) return false;
-			else return true;
+			let response = true;
+			if (key === 'middle' && pointCounts[key] >= 24) response = false;
+			else if (key !== 'middle' && pointCounts[key] >= 12) response = false;
+			if (!response) pushToFullIfNeeded(key) // check if we need to retire any points
+			return response;
 		}
 
 		const getNewPoints = () => {
+			if (full.length === 9) return; // avoid infinite loop if we're full up
 			const num = Math.floor(Math.random() * Object.keys(pointCounts).length);
 			const key = Object.keys(pointCounts)[num];
-			return [p[key], getRandomPoints()];
+			if (!morePointsAvail(key)) return getNewPoints();
+			pointCounts[key]++;
+			return [p[key], getRandomPoints(), key];
 		}
 
 		const getRandomPoints = () => {
@@ -90,6 +105,7 @@
 
 		const resize = () => {
 			clearCanvas()
+			resetPointCounts()
 			const [w, h] = [canvas.width, canvas.height];
 			p.middle = [w / 2, h / 2];
 			p.upSide = [w / 2, 0];
@@ -110,6 +126,18 @@
 			ctx.lineWidth = 2;
 		}
 
+		const updatePointCountsAndFullValues = (points) => {
+			if (!points) return;
+			points.forEach(point => {
+				const key = point[2];
+				pointCounts[key]--;
+				const index = full.indexOf(key)
+				if (index > -1) {
+					full.splice(index, 1)
+				}
+			})
+		}
+
 		const fillPicture = () => {
 			const curSize = currentPicture.length;
 			if (curSize <= howMany) {
@@ -119,11 +147,13 @@
 			}
 			else if (howMany < curSize) {
 				const delCount = curSize - howMany
-				currentPicture.splice(howMany, delCount);
+				const removed = currentPicture.splice(howMany, delCount);
+				updatePointCountsAndFullValues(removed);
 			}
 		}
 
 		const draw = (points) => {
+			if (!points) return;
 
 			const [fromX, fromY] = points[0];
 			const [toX, toY] = points[1];
