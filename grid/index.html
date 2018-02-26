@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ grid</title>
+</head>
+
+<body>
+
+	<canvas class="canvas" id="walk-canvas"></canvas>
+
+	<style>
+		html,
+		body {
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			background: rgb(117, 149, 255);
+		}
+
+		.canvas {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+	<script>
+
+		const canvas = document.getElementById('walk-canvas');
+		const ctx = canvas.getContext('2d');
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		ctx.lineJoin = 'round';
+		ctx.lineCap = 'round';
+		ctx.lineWidth = 2;
+		ctx.strokeStyle = 'rgb(231, 231, 231)';
+
+		const windowWidth = window.innerWidth;
+		const windowHeight = window.innerHeight;
+
+		const staticPoints = [];
+		let userPoints = [];
+
+		for (let i = 10; i < windowWidth; i += 20) {
+			staticPoints.push([[i, 0], [i, windowHeight]]);
+		}
+
+		for (let i = 20; i < windowHeight; i += 30) {
+			staticPoints.push([[0, i], [windowWidth, i]]);
+		}
+
+		function handleMouseMove(e) {
+			e.preventDefault();
+			let mouseX;
+			let mouseY;
+
+			if (e.changedTouches) {
+				mouseX = Math.round((e.changedTouches[0].pageX / (window.innerWidth / 2) - 1) * -20);
+				mouseY = Math.round((e.changedTouches[0].pageY / (window.innerHeight / 2) - 1) * -20);
+			} else {
+				mouseX = Math.round((e.offsetX / (window.innerWidth / 2) - 1) * -20);
+				mouseY = Math.round((e.offsetY / (window.innerHeight / 2) - 1) * -20);
+			}
+
+			userPoints = [];
+
+			for (let i = 10; i < windowWidth; i += 20) {
+				userPoints.push([[i + mouseX, 0], [i + mouseX, windowHeight]]);
+			}
+
+			for (let i = 10; i < windowHeight; i += 30) {
+				userPoints.push([[0, i + mouseY], [windowWidth, i + mouseY]]);
+			}
+
+			draw(staticPoints, userPoints)
+		}
+
+		function draw(staticPoints, userPoints) {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+			staticPoints.forEach(point => {
+				const [fromX, fromY] = point[0];
+				const [toX, toY] = point[1];
+
+				// draw point
+				ctx.beginPath();
+				ctx.moveTo(fromX, fromY);
+				ctx.lineTo(toX, toY);
+				ctx.stroke();
+			});
+			userPoints.forEach(point => {
+				const [fromX, fromY] = point[0];
+				const [toX, toY] = point[1];
+
+				// draw point
+				ctx.beginPath();
+				ctx.moveTo(fromX, fromY);
+				ctx.lineTo(toX, toY);
+				ctx.stroke();
+			});
+		}
+
+		draw(staticPoints, userPoints);
+
+		window.addEventListener('mousemove', handleMouseMove);
+		window.addEventListener('touchmove', handleMouseMove);
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="pressure.js"></script>
+	<title>pressure</title>
+</head>
+
+<body>
+
+	<canvas class="iphoneFix"></canvas>
+
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+			height: 100vh;
+		}
+
+		canvas {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+
+	<script src="../iphoneFix.js"></script>
+
+	<script>
+
+		const canvas = document.querySelector('canvas');
+		const ctx = canvas.getContext('2d');
+		let last = 0;
+		let currentPicture = [];
+
+		// starting points from
+		const p = {};
+
+		// middle: 24
+		// side: 12
+		// corder: 12
+		// (total 120)
+		const pointCounts = {
+			middle: 0,
+			upSide: 0,
+			rightSide: 0,
+			downSide: 0,
+			leftSide: 0,
+			upRight: 0,
+			downRight: 0,
+			downLeft: 0,
+			upLeft: 0,
+		}
+
+		const resetPointCounts = () => {
+			p.middle = 0;
+			p.upSide = 0;
+			p.rightSide = 0;
+			p.downSide = 0;
+			p.leftSide = 0;
+			p.upRight = 0;
+			p.downRight = 0;
+			p.downLeft = 0;
+			p.upLeft = 0;
+		}
+
+		const getRandomBlue = () => {
+			const hue = (Math.random() * 15) + 40;
+			return `hsl(221, 50%, ${hue}%)`;
+		}
+
+		const morePointsAvail = (key) => {
+			if (key === 'middle' && pointCounts[key] >= 24) return false;
+			else if (key !== 'middle' && pointCounts[key] >= 12) return false;
+			else return true;
+		}
+
+		const getNewPoints = () => {
+			const num = Math.floor(Math.random() * Object.keys(pointCounts).length);
+			const key = Object.keys(pointCounts)[num];
+			return [p[key], getRandomPoints()];
+		}
+
+		const getRandomPoints = () => {
+			const x = Math.random() * canvas.width;
+			const y = Math.random() * canvas.height;
+			return [x, y];
+		}
+
+		const resize = () => {
+			clearCanvas()
+			const [w, h] = [canvas.width, canvas.height];
+			p.middle = [w / 2, h / 2];
+			p.upSide = [w / 2, 0];
+			p.rightSide = [w, h / 2];
+			p.downSide = [w / 2, h];
+			p.leftSide = [0, h / 2];
+			p.upRight = [w, 0];
+			p.downRight = [w, h];
+			p.downLeft = [0, h];
+			p.upLeft = [0, 0];
+		}
+
+		const clearCanvas = () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.lineJoin = 'round';
+			ctx.lineCap = 'round';
+			ctx.lineWidth = 2;
+		}
+
+		const fillPicture = () => {
+			const curSize = currentPicture.length;
+			if (curSize <= howMany) {
+				for (i = 0; i < howMany - curSize; i++) {
+					currentPicture.push(getNewPoints());
+				}
+			}
+			else if (howMany < curSize) {
+				const delCount = curSize - howMany
+				currentPicture.splice(howMany, delCount);
+			}
+		}
+
+		const draw = (points) => {
+
+			const [fromX, fromY] = points[0];
+			const [toX, toY] = points[1];
+
+			// draw point
+			ctx.strokeStyle = getRandomBlue();
+			ctx.beginPath();
+			ctx.moveTo(fromX, fromY);
+			ctx.lineTo(toX, toY);
+			ctx.stroke();
+		}
+
+		const redraw = () => {
+			fillPicture();
+			clearCanvas();
+			if (!currentPicture) return;
+			currentPicture.forEach(points => {
+				draw(points);
+			})
+		}
+
+		Pressure.set('canvas', {
+			change: function (force) {
+				if (force === 1 && currentPicture.length >= 120) return;
+				howMany = Math.floor(force * 120);
+				redraw();
+			}
+		});
+
+		window.addEventListener('load', resize);
+		window.addEventListener('resize', resize);
+		window.addEventListener('touchmove', e => e.preventDefault());
+		window.addEventListener('touchend', resize);
+		window.addEventListener('mouseup', resize);
+
+	</script>
+
+</body>
+
+</html>

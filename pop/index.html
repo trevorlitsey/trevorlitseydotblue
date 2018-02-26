@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="hark.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+
+	<div class="container"></div>
+
+	<style>
+		body {
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.container {
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: space-around;
+		}
+
+		.box {
+			height: 50px;
+			width: 50px;
+			margin: 5px;
+			transition: all .2s;
+		}
+
+		.on {
+			background-color: #0067FF;
+			transform: scale(1.05);
+		}
+	</style>
+
+	<script>
+
+		const container = document.querySelector('.container');
+		const audio = navigator.mediaDevices.getUserMedia({ audio: true });
+
+		let totalBoxes = Math.floor(window.innerHeight / 60) * Math.floor(window.innerWidth / 60);
+
+		let lastDb = -200;
+		let lastFired;
+		let html = ''
+
+		for (i = 0; i < totalBoxes; i++) {
+			container.innerHTML += `<div class="box" id=${i}></div>`;
+		}
+
+		function isElementInViewport(el) {
+			var rect = el.getBoundingClientRect();
+
+			return (
+				rect.top >= 0 &&
+				rect.left >= 0 &&
+				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /*or $(window).height() */
+				rect.right <= (window.innerWidth || document.documentElement.clientWidth) /*or $(window).width() */
+			);
+		}
+
+
+		function pop() {
+			const box = document.getElementById(Math.floor(Math.random() * totalBoxes));
+			box.classList.add('on');
+			box.addEventListener('transitionend', () => box.classList.remove('on'));
+		}
+
+		audio.then(stream => {
+
+			const options = {};
+			const speechEvents = hark(stream, options);
+
+			speechEvents.on('volume_change', db => {
+				// console.log(lastDb);
+				if (db <= -70 || Date.now() <= lastFired + 200) return;
+				lastDb = db;
+				lastFired = Date.now();
+				pop();
+			});
+
+		}).catch(err => container.innerHTML = 'please enable access to microphone');
+
+		function handleResize() {
+			container.innerHTML = '';
+			totalBoxes = Math.floor(window.innerHeight / 60) * Math.floor(window.innerWidth / 60);
+			for (i = 0; i < totalBoxes; i++) {
+				container.innerHTML += `<div class="box" id=${i}></div>`;
+			}
+		}
+
+		window.addEventListener('resize', handleResize);
+
+
+	</script>
+
+
+
+</body>
+
+</html>

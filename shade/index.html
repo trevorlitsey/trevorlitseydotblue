@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ shade</title>
+</head>
+
+<body>
+
+	<div class="wrapper"></div>
+
+	<style>
+		body {
+			height: 100vh;
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.wrapper {
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.square {
+			transition: all 5s;
+			height: 50px;
+			width: 100%;
+		}
+	</style>
+
+	<script>
+
+		function getRandomBlue() {
+			const hue = (Math.random() * 15) + 40;
+			return `hsla(221, 50%, ${hue}%, .9)`;
+		}
+
+		function removeTransition() {
+			this.removeAttribute('data-transition');
+		}
+
+		function handleResize() {
+			const wrapper = document.querySelector('.wrapper');
+			const rows = Math.floor((window.innerHeight + 50) / 50);
+
+			let html = '';
+			for (i = 0; i < rows; i++) {
+				html += `<div class="square" id="${i}"></div>`;
+			}
+			wrapper.innerHTML = html;
+
+			document.querySelectorAll('.square').forEach(square => {
+				square.style.background = getRandomBlue()
+				square.addEventListener('transitionend', removeTransition);
+			});
+
+
+			start();
+		}
+
+		function start() {
+			const squares = document.querySelectorAll('.square');
+			const interval = setInterval(() => {
+				const num = Math.floor(Math.random() * squares.length);
+				if (squares[num].getAttribute('data-transition') == "true") return;
+				squares[num].style.background = getRandomBlue();
+				squares[num].setAttribute('data-transition', 'true');
+			}, 100)
+		}
+
+
+		handleResize();
+		window.addEventListener('resize', handleResize);
+
+
+
+
+	</script>
+
+</body>
+
+</html>

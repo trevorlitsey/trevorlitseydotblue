@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ big small</title>
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="circ" id="one"></div>
+		<div class="circ" id="two"></div>
+		<div class="circ" id="three"></div>
+		<div class="circ" id="four"></div>
+	</div>
+
+	<style>
+		html {
+			--size: calc(10vh + 10vw);
+			--dim: calc(var(--size) * 2)
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			min-height: var(--dim);
+			min-width: var(--dim);
+			width: 100vw;
+			height: 100vh;
+		}
+
+		.circ {
+			width: var(--size);
+			height: var(--size);
+			border-radius: 50%;
+			margin: 5%;
+			background: rgb(0, 96, 240);
+		}
+
+		#one {
+			margin-right: 0;
+		}
+
+		#two {
+			justify-self: right;
+			margin-left: 0;
+		}
+
+		#three {
+			align-self: end;
+			margin-top: 0;
+		}
+
+		#four {
+			justify-self: right;
+			align-self: end;
+			margin-top: 0;
+			margin-left: 0;
+		}
+	</style>
+
+	<script>
+
+		const circles = document.querySelectorAll('.circ');
+
+		// ugh iphones
+		const ua = window.navigator.userAgent;
+		const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+		const webkit = !!ua.match(/WebKit/i);
+		const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+
+		if (iOSSafari) {
+			document.querySelector('.wrapper').style.height = '88vh';
+		}
+
+		function calculateDistance(elem, mouseX, mouseY) {
+			const bound = elem.getBoundingClientRect();
+			return Math.floor(Math.sqrt(Math.pow(mouseX - (bound.left + (elem.offsetWidth / 2)), 2) + Math.pow(mouseY - (bound.top + (elem.offsetHeight / 2)), 2)));
+		}
+
+		function resizeCircles(e) {
+			e.preventDefault();
+
+			let mouseX = e.pageX;
+			let mouseY = e.pageY;
+
+			if (e.changedTouches) {
+				mouseX = e.changedTouches[0].pageX;
+				mouseY = e.changedTouches[0].pageY;
+			} else {
+				mouseX = e.pageX;
+				mouseY = e.pageY;
+			}
+
+			circles.forEach(circ => {
+				const distance = calculateDistance(circ, mouseX, mouseY);
+				circ.style.width = `${distance / 3}px`;
+				circ.style.height = `${distance / 3}px`;
+			})
+		}
+
+		document.addEventListener('mousemove', resizeCircles);
+		document.addEventListener('touchmove', resizeCircles);
+
+	</script>
+
+</body>
+
+</html>

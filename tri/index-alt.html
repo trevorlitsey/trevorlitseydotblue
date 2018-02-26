@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ ^</title>
+</head>
+
+<body>
+
+	<div class="triangle"></div>
+
+	<style>
+		:root {
+			font-size: calc(4vh + 4vw + 2px);
+		}
+
+		body {
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgb(16, 100, 255);
+			transition: background-color 6s linear;
+		}
+
+		.triangle {
+			width: 0;
+			height: 0;
+			border-left: 4rem solid transparent;
+			border-right: 4rem solid transparent;
+			border-bottom: 4rem solid rgb(66, 126, 255);
+			transition: border-bottom 6s linear;
+		}
+	</style>
+
+	<script>
+
+		const body = document.querySelector('body');
+		const triangle = document.querySelector('.triangle');
+
+		const lightBlue = 'rgb(66, 126, 255)';
+		const darkBlue = 'rgb(16, 100, 255)';
+
+		let direction = true;
+
+		const interval = setInterval(() => {
+			if (direction) {
+				console.log('true');
+				body.style.background = lightBlue;
+				triangle.style['border-bottom'] = `4rem solid ${darkBlue}`;
+			} else {
+				console.log('false');
+				body.style.background = darkBlue;
+				triangle.style['border-bottom'] = `4rem solid ${lightBlue}`;
+			}
+			direction = !direction;
+		}, 8000)
+
+	</script>
+
+</body>
+
+</html>

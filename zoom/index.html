@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ zoom</title>
+</head>
+
+<body>
+	<div class="square square0">
+		<div class="square square1">
+			<div class="square square2">
+				<div class="square square3">
+					<div class="square square4">
+						<div class="square square5">
+							<div class="square square6">
+								<div class="square square7">
+									<div class="square square8">
+										<div class="square square9">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+
+		.square {
+			margin: 10%;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			justify-content: center;
+			align-content: center;
+		}
+
+		.square.square0 {
+			height: 100vh;
+			margin: 0;
+		}
+	</style>
+
+
+	<script>
+
+		// ugh iphones
+		const ua = window.navigator.userAgent;
+		const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+		const webkit = !!ua.match(/WebKit/i);
+		const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
+		if (iOSSafari) document.querySelector('.square0').style.height = '88vh';
+
+		const wrapper = document.getElementById('speed');
+
+		function getRandomBlue() {
+			const hue = Math.floor(Math.random() * 30 + 40);
+			return `hsl(221, 50%, ${hue}%)`;
+		}
+
+		function resetSquares() {
+			const squares = [];
+			for (i = 1; i < 10; i++) {
+				squares.push({
+					color: getRandomBlue(),
+				})
+			}
+			return squares;
+		}
+
+		function resetScreen(e) {
+			if (e) e.preventDefault();
+			const squares = resetSquares();
+			squares.forEach((square, i) => {
+				document.querySelector(`.square${i}`).style.background = square.color;
+			})
+		}
+
+		function start() {
+			let interval;
+			if (interval) clearInterval(interval);
+			interval = setInterval(() => {
+				resetScreen();
+			}, 100)
+		}
+
+		start();
+
+
+		window.addEventListener('resize', resetScreen);
+		window.addEventListener('mousemove', resetScreen)
+		window.addEventListener('touchmove', resetScreen)
+
+
+	</script>
+
+
+
+</body>
+
+</html>

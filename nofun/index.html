@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ no fun</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<h1>
+			<span>N</span>
+			<span>O</span>
+			<div class="space"></div>
+			<span>F</span>
+			<span>U</span>
+			<span>N</span>
+		</h1>
+	</div>
+
+	<style>
+		html {
+			font-size: calc(3vh + 4vw);
+		}
+
+		body {
+			background: #0095FF;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		.wrapper {
+			justify-content: center;
+		}
+
+		.space {
+			width: calc(4vw);
+		}
+
+		h1 {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-end;
+			height: 100px;
+		}
+
+		span {
+			transition: all .5s ease;
+		}
+
+		.up {
+			display: absolute;
+			transform: translateY(-10px);
+		}
+	</style>
+
+
+	<script>
+
+
+		const letters = document.querySelectorAll('span');
+
+		setInterval(() => {
+			wave(letters);
+		}, 1400)
+
+		function wave(letters) {
+
+			function remove() {
+				this.classList.remove('up');
+			}
+
+			let i = 0;
+			const interval = setInterval(() => {
+
+				letters[i].classList.add('up')
+				letters[i].addEventListener('transitionend', remove);
+				i++
+				if (i === letters.length) clearInterval(interval);
+
+
+			}, 100)
+		}
+
+
+		wave(letters);
+
+
+
+	</script>
+
+
+</body>
+
+</html>

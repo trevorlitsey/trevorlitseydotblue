@@ -1,0 +1,11 @@
+{
+	"name": "pop",
+	"description": "a poppy app",
+	"icons": "favicon.ico",
+	"permissions": {
+		"audio-capture" : {
+			"description" : "Audio capture"
+		}
+	},
+	"type": "privileged"
+}

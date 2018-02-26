@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ float</title>
+</head>
+
+<body>
+
+	<canvas id="canvas"></canvas>
+
+
+	<style>
+		body {
+			background: rgb(17, 74, 199);
+			margin: 0;
+			overflow: hidden;
+			height: 100vh;
+			filter: blur(3px);
+		}
+
+		.canvas {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+
+	<script>
+
+		const canvas = document.getElementById('canvas');
+		const ctx = canvas.getContext('2d');
+		let interval;
+		let stars = [];
+
+		function renderRect(ctx, star) {
+			const { x, y, width, height } = star;
+			ctx.rect(x, y, width, height);
+			ctx.fill();
+		}
+
+		function clearRect(star) {
+			const { x, y, width, height } = star;
+			ctx.beginPath();
+			ctx.clearRect(x, y, width, height);
+		}
+
+		function handleResize() {
+			stars = [];
+			redrawCanvas(ctx, stars)
+			const columns = window.innerWidth / 40;
+
+			for (let i = 0; i < columns; i++) {
+				const coords = {
+					x: Math.floor((i) * 40) + 20,
+					y: -100,
+					width: 5,
+					height: 30
+				}
+				stars.push(coords)
+				start(stars);
+			}
+		}
+
+		function redrawCanvas(ctx, stars) {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			ctx.lineJoin = 'round';
+			ctx.lineCap = 'round';
+			ctx.lineWidth = 2;
+			ctx.fillStyle = 'white';
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			stars.forEach(coord => renderRect(ctx, coord));
+		}
+
+		function fall(star) {
+			if (star.y >= -99 && star.y <= window.innerHeight - 5) return;
+			star.y = -100;
+			const interval = setInterval(() => {
+				clearRect(star)
+				star.y += 90;
+				renderRect(ctx, star)
+				if (star.y > window.innerHeight) clearInterval(interval);
+			}, 30);
+		}
+
+		function start(stars) {
+			stars.forEach(coord => renderRect(ctx, coord));
+			clearInterval(interval);
+			interval = setInterval(() => {
+				const num = Math.floor(Math.random() * stars.length)
+				fall(stars[num]);
+			}, 250)
+		}
+
+		handleResize();
+
+		window.addEventListener('resize', handleResize);
+
+
+	</script>
+
+
+</body>
+
+</html>

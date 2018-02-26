@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+    <title>__ sweet</title>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="text">
+				<p class"intro">(click)</p>
+			</div>
+		</div>
+
+
+		<style>
+
+			:root {
+				font-size: calc(4vw + 4vh + 1vmin);
+			}
+		
+			html, body {
+				background: hsl(0, 0%, 0%);
+				height: 100vh;
+				width: 100vw;
+				margin: 0;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				box-sizing: border-box;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+
+			.container {
+				text-align: center;
+				width: 50%;
+				height: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 2%;
+			}
+
+			.text {
+				color: white;
+			}
+
+			p {
+				font-size: .5rem;
+			}
+		
+		</style>
+
+		<Script>
+		
+			const text = [ '',
+				'Sweet',
+				'sweet',
+				'sweet',
+				'sweet',
+				'sweet',
+				'tea.',
+				'',
+				'Susie Asado.',
+				'',
+				'Sweet',
+				'sweet',
+				'sweet',
+				'sweet',
+				'sweet',
+				'tea.',
+				'',
+				'Susie Asado.',
+				'',
+				'Susie Asado',
+				'which',
+				'is',
+				'a',
+				'told',
+				'tray',
+				'sure.',
+				'',
+				'A',
+				'lean',
+				'on',
+				'the',
+				'shoe',
+				'this',
+				'means',
+				'slips',
+				'slips',
+				'hers.',
+				'',
+				'When',
+				'the',
+				'ancient',
+				'light',
+				'grey',
+				'is',
+				'clean',
+				'it',
+				'is',
+				'yellow,',
+				'it',
+				'is',
+				'a',
+				'silver',
+				'seller.',
+				'',
+				'This',
+				'is',
+				'a',
+				'please',
+				'this',
+				'is',
+				'a',
+				'please',
+				'there',
+				'are',
+				'the',
+				'saids',
+				'to',
+				'jelly.',
+				'',
+				'These',
+				'are',
+				'the',
+				'wets',
+				'these',
+				'say',
+				'the',
+				'sets',
+				'to',
+				'leave',
+				'a',
+				'crown',
+				'to',
+				'Incy.',
+				'',
+				'Incy',
+				'is',
+				'short',
+				'for',
+				'incubus.',
+				'',
+				'A',
+				'pot.',
+				'',
+				'A',
+				'pot',
+				'is',
+				'a',
+				'beginning',
+				'of',
+				'a',
+				'rare',
+				'bit',
+				'of',
+				'trees.',
+				'',
+				'Trees',
+				'tremble,',
+				'the',
+				'old',
+				'vats',
+				'are',
+				'in',
+				'bobbles,',
+				'bobbles',
+				'which',
+				'shade',
+				'and',
+				'shove',
+				'and',
+				'render',
+				'clean,',
+				'render',
+				'clean',
+				'must.',
+				'',
+				'Drink pups.',
+				'',
+				'Drink',
+				'pups',
+				'drink',
+				'pups',
+				'lease',
+				'a',
+				'sash',
+				'hold,',
+				'see',
+				'it',
+				'shine',
+				'and',
+				'a',
+				'bobolink',
+				'has',
+				'pins.',
+				'',
+				'It',
+				'shows',
+				'a',
+				'nail.',
+				'',
+				'What',
+				'is',
+				'a',
+				'nail.',
+				'',
+				'A',
+				'nail',
+				'is',
+				'unison.',
+				'',
+				'Sweet',
+				'sweet',
+				'sweet',
+				'sweet',
+				'sweet',
+				'tea.' ];
+
+			// select words on page
+			const words = document.querySelector('.text');
+			index = 0;
+
+			function checkDirection(keyCode) {
+
+				if (keyCode === 37) {
+					// decrement
+					index <= 0 ? index = 0 : index--;
+				} else {
+					// increment
+					index === text.length ? index = 0 : index++;
+				}
+				
+			}
+
+			function handleKeyUp(e) {
+
+				checkDirection(e.keyCode);
+
+				// set text to scren
+				words.innerHTML = `<h2>${text[index]}</h2>`;
+				
+				if (text[index] !== "") {
+					// generate new hue and apply to background
+					const hue = Math.random() * 100;
+					document.body.style.background = `hsl(236, 50%, ${hue}%)`;
+
+					// set text color in contract to background color
+					hue >= 50 ? words.style.color = "black" : words.style.color = "white";
+				}
+			}
+
+			window.addEventListener('keyup', handleKeyUp);
+			window.addEventListener('click', handleKeyUp);
+			window.addEventListener('touchstart', handleKeyUp);
+		
+		</Script>
+
+	</body>
+
+
+</html>
+

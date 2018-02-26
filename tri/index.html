@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>__ ^</title>
+</head>
+
+<body>
+
+	<div class="triangle"></div>
+
+	<style>
+		:root {
+			font-size: calc(4vh + 4vw + 2px);
+		}
+
+		body,
+		html {
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			overflow: hidden;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgb(16, 100, 255);
+		}
+
+		.triangle {
+			width: 0;
+			height: 0;
+			border-left: 4rem solid transparent;
+			border-right: 4rem solid transparent;
+			border-bottom: 4rem solid rgb(66, 126, 255);
+		}
+	</style>
+
+	<script>
+
+		const body = document.querySelector('body');
+		const triangle = document.querySelector('.triangle');
+
+		const lightBlue = [66, 126, 255];
+		const darkBlue = [16, 100, 255];
+
+		let triangleColor = [...lightBlue];
+		let bodyColor = [...darkBlue];
+
+		let direction = true;
+
+		const interval = setInterval(() => {
+			const num = Math.floor(Math.random() * 2);
+
+			if (direction) {
+				if (triangleColor[num] > darkBlue[num]) triangleColor[num]--;
+				if (bodyColor[num] < lightBlue[num]) bodyColor[num]++;
+
+				body.style.background = `rgb(${bodyColor[0]}, ${bodyColor[1]}, ${bodyColor[2]})`;
+				triangle.style['border-bottom'] = `4rem solid rgb(${triangleColor[0]}, ${triangleColor[1]}, ${triangleColor[2]})`;
+
+				if (triangleColor[0] == darkBlue[0] || bodyColor[0] == lightBlue[0]) direction = !direction;
+
+			} else {
+				if (triangleColor[num] < lightBlue[num]) triangleColor[num]++;
+				if (bodyColor[num] > darkBlue[num]) bodyColor[num]--;
+
+				body.style.background = `rgb(${bodyColor[0]}, ${bodyColor[1]}, ${bodyColor[2]})`;
+				triangle.style['border-bottom'] = `4rem solid rgb(${triangleColor[0]}, ${triangleColor[1]}, ${triangleColor[2]})`;
+
+				if (triangleColor[0] == lightBlue[0] || bodyColor[0] == darkBlue[0]) direction = !direction;
+			}
+		}, 100)
+
+	</script>
+
+</body>
+
+</html>
