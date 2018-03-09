@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<script src="../js/iphoneFix.js"></script>
+	<script src="../js/paper-core.js"></script>
+	<script src="../js/pressure.js"></script>
+	<title>__ spin</title>
+</head>
+
+<body>
+
+	<canvas id="canvas"></canvas>
+
+
+	<style>
+		body {
+			margin: 0;
+			overflow: hidden;
+		}
+
+		#canvas {
+			height: 100vh;
+			width: 100vw;
+		}
+	</style>
+
+	<script>
+
+		const p = paper; // paper shorthand
+		const canvas = document.querySelector('#canvas');
+
+		fixHeightForIphoneScreen(canvas);
+		p.setup(canvas);
+
+		const squares = new p.Group();
+		const centerPoint = new p.Point(p.view.center);
+		let speed = 4;
+
+		const getRandomBlue = () => {
+			const hue = Math.floor(Math.random() * 30 + 40);
+			return `hsl(221, 50%, ${hue}%)`;
+		}
+
+		const generateSquares = () => {
+
+			for (let i = 8; i > 0; i--) {
+				const [width, height] = [Math.floor(i * (canvas.width / 5)), Math.floor(i * (canvas.height / 5))];
+
+				const size = new p.Size(width, height);
+				const center = new p.Point(centerPoint.x - width / 2, centerPoint.y - height / 2)
+				const square = new p.Rectangle(center, size);
+				const path = new p.Path.Rectangle(square);
+				const blue = getRandomBlue();
+
+				path.fillColor = blue;
+				squares.addChild(path);
+			}
+
+		}
+
+		generateSquares();
+
+		p.view.onFrame = () => {
+			squares.children.forEach((square, i) => {
+				i % 2 === 0 ? square.rotate(speed + i * .3) : square.rotate(-speed - i * .3)
+			});
+		}
+
+		p.view.onResize = () => {
+			console.log('resize!');
+
+			squares.children.forEach((square) => {
+				const [width, height] = [Math.floor(i * (canvas.width / 5)), Math.floor(i * (canvas.height / 5))];
+				square.bounds.size.set(width, height);
+				square.bounds.center.set(centerPoint.x, centerPoint.y);
+			});
+		}
+
+		Pressure.set('canvas', {
+			change: function (force) {
+				speed = Math.floor(force * 45 + 5);
+			}
+		});
+
+
+		window.addEventListener('mouseup', () => speed = 4);
+		window.addEventListener('touchend', () => speed = 4);
+		window.addEventListener('resize', () => {
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+
+		})
+
+	</script>
+
+</body>
+
+</html>

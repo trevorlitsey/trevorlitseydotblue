@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>__ blink</title>
+	<script src="../js/iphoneFix.js"></script>
 </head>
 
 <body>
@@ -14,8 +15,6 @@
 		html body {
 			box-sizing: border-box;
 			margin: 0;
-			padding: 0;
-			height: 100vh;
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr;
@@ -31,6 +30,7 @@
 		}
 
 		.container {
+			height: 100vh;
 			display: grid;
 			grid-template-columns: repeat(10, 10px);
 			grid-template-rows: repeat(10, 10px);
@@ -45,7 +45,9 @@
 			background: hsla(221, 50%, 50%, .5);
 		}
 	</style>
-
+	<script>
+		fixHeightForIphoneScreen(document.querySelector('.container'));
+	</script>
 	<script src="blink.js"></script>
 
 </body>

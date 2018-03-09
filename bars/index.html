@@ -5,27 +5,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>|||||</title>
+	<title>__ |||||</title>
+	<script src="../js/iphoneFix.js"></script>
 </head>
 
 <body>
 
-	<div class="bar"></div>
-	<div class="bar"></div>
-	<div class="bar"></div>
-	<div class="bar"></div>
-	<div class="bar"></div>
-	<div class="bar"></div>
-	<div class="bar"></div>
+	<div class="wrapper">
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+		<div class="bar"></div>
+	</div>
 
 	<style>
 		html body {
-			height: 100vh;
+			margin: 0;
 			background: rgb(10, 107, 211);
+			overflow: hidden;
+		}
+
+		.wrapper {
 			display: flex;
 			justify-content: space-around;
 			align-items: center;
-			overflow: hidden;
+			height: 100vh;
 		}
 
 		.bar {
@@ -43,13 +50,7 @@
 
 	<script>
 
-		// ugh iphones
-		const ua = window.navigator.userAgent;
-		const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
-		const webkit = !!ua.match(/WebKit/i);
-		const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
-		if (iOSSafari) document.body.style.height = '88vh';
-
+		fixHeightForIphoneScreen(document.querySelector('.wrapper'));
 		const bars = document.querySelectorAll('.bar');
 
 		let index = 0;
@@ -63,8 +64,6 @@
 				direction ? index++ : index--;
 			}, 60)
 		}, 100);
-
-		window.scrollTo(100, 0);
 
 	</script>
 

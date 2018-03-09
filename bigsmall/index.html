@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>__ big small</title>
+	<script src="../js/iphoneFix.js"></script>
 </head>
 
 <body>
@@ -71,15 +72,7 @@
 
 		const circles = document.querySelectorAll('.circ');
 
-		// ugh iphones
-		const ua = window.navigator.userAgent;
-		const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
-		const webkit = !!ua.match(/WebKit/i);
-		const iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
-
-		if (iOSSafari) {
-			document.querySelector('.wrapper').style.height = '88vh';
-		}
+		fixHeightForIphoneScreen(document.querySelector('.wrapper'))
 
 		function calculateDistance(elem, mouseX, mouseY) {
 			const bound = elem.getBoundingClientRect();

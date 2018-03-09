@@ -19,7 +19,7 @@ function poputalePieces() {
 
 	}
 	container.innerHTML = html;
-	
+
 	document.querySelectorAll('.game-piece').forEach(piece => {
 		piece.addEventListener('click', handleClick)
 		piece.addEventListener('touchstart', handleClick)
@@ -28,7 +28,7 @@ function poputalePieces() {
 
 function start() {
 	stop = false;
-	const interval = setInterval(function() {
+	const interval = setInterval(function () {
 		if (stop) clearInterval(interval)
 		else {
 			makeMove();
@@ -50,11 +50,11 @@ function makeMove() {
 	// get game pieces and loop over them
 	const gamePieces = Array.from(document.querySelectorAll('.game-piece'));
 	const currentGameState = gamePieces.map(piece => piece.classList[1]);
-	
+
 	let movesLeft = false;
-	
+
 	gamePieces.forEach(gamePiece => {
-		
+
 		const id = parseInt(gamePiece.id);
 		if (currentGameState[id]) movesLeft = true;
 
@@ -62,14 +62,14 @@ function makeMove() {
 
 		// get number of neighbors
 		let neighbors = 0;
-		const neighborsList = [	(id - columns - 1 + squares) % squares,
-														(id - columns + squares) % squares,
-														(id - columns + 1 + squares) % squares,
-														(id - 1 + squares) % squares,
-														(id + 1) % squares,
-														(id + columns - 1) % squares,
-														(id + columns) % squares,
-														(id + columns + 1) % totalSquares ];	
+		const neighborsList = [(id - columns - 1 + squares) % squares,
+		(id - columns + squares) % squares,
+		(id - columns + 1 + squares) % squares,
+		(id - 1 + squares) % squares,
+		(id + 1) % squares,
+		(id + columns - 1) % squares,
+		(id + columns) % squares,
+		(id + columns + 1) % totalSquares];
 
 		neighborsList.forEach(neighbor => {
 			if (currentGameState[neighbor]) neighbors++;
@@ -87,7 +87,7 @@ function makeMove() {
 		else if (currentGameState[id] && neighbors > 3) {
 			gamePiece.classList.remove('on');
 			gamePiece.style.background = 'none';
-		} 
+		}
 
 		//4. Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
 		else if (!currentGameState[id] && neighbors === 3) {
@@ -99,7 +99,7 @@ function makeMove() {
 	if (!movesLeft) clear();
 }
 
-function handleClick(e) {	
+function handleClick(e) {
 	document.getElementById(e.currentTarget.id).classList.toggle('on');
 }
 
@@ -109,7 +109,7 @@ function handleResize() {
 	columns = Math.floor(width / 15);
 	rows = Math.floor(height / 15);
 	totalSquares = columns * rows;
-	
+
 	container.style.width = width;
 	container.style.height = height;
 	container.style['grid-template-rows'] = `repeat(${rows}, 15px)`;
@@ -118,9 +118,8 @@ function handleResize() {
 	start();
 }
 
-
 // start
-handleResize();
+window.onload = handleResize();
 
 window.addEventListener('resize', handleResize);
 
