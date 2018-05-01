@@ -10,23 +10,37 @@
 
 <body>
 
-	<div class="twitter">
-		<a class="twitter-timeline" href="https://twitter.com/__blu___?ref_src=twsrc%5Etfw">Tweets by __blu___</a>
-	</div>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<div class="no-cursor"></div>
 
 	<style>
 		body {
-			display: flex;
-			justify-content: center;
-			align-content: center;
+			margin: 0;
+			background-color: hsl(215, 100%, 60%);
+			transition: all 5s;
 		}
 
-		.twitter {
-			height: 80%;
-			width: 50%;
+		.no-cursor {
+			height: 100vh;
+			cursor: none;
 		}
 	</style>
+
+	<script>
+
+
+		// 215
+
+		const body = document.body;
+
+		const interval = setInterval(() => {
+
+			const num = Math.round(Math.random() * 100);
+			const color = `hsl(215, 100%, ${num}%)`
+			body.style['background-color'] = color;
+		}, 5000);
+
+
+	</script>
 
 </body>
 
