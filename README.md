@@ -1,6 +1,6 @@
 # trevorlitsey.com
 
-Experients of color and shape in Javascript/CSS
+Experiments of color and shape in Javascript/CSS
 
 ### trevor litsey dot com
 - [bars](http://www.trevorlitsey.com/bars)
