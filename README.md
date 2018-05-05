@@ -2,6 +2,7 @@
 
 Experients of color and shape in Javascript/CSS
 
+### trevor litsey dot com
 - [bars](http://www.trevorlitsey.com/bars)
 - [big/small](http://www.trevorlitsey.com/bigsmall)
 - [float](http://www.trevorlitsey.com/float)
@@ -12,7 +13,7 @@ Experients of color and shape in Javascript/CSS
 - [tri](http://www.trevorlitsey.com/tri)
 - [zoom](http://www.trevorlitsey.com/zoom)
 
-### diypostmodern dot com
+### diy postmodern dot com
 - [anni](http://diypostmodern.com/anni)
 - [josef](http://diypostmodern.com/josef)
 - [on a clear day](http://diypostmodern.com/on-a-clear-day)
