@@ -226,7 +226,7 @@
 	<div class="container--sites">
 		<div class="card">
 			<a href="http://www.plays.gratis" target="_blank">
-				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif" data-replace="h_590,w_590"
+				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif" data-replace="h_590,w_590/"
 				 alt="plays.gratis">
 				<div class="title--card">
 					plays.gratis
@@ -306,12 +306,14 @@
 		// ---------
 		function loadImage(entries) {
 			entries.filter(isIntersecting).forEach(({ target }) => {
-				const urlParts = target.src.split('h_1,w_1');
-				target.src = [].concat(
-					urlParts[0], // base
-					target.dataset.replace, // new dimensions
-					urlParts[1] // actual pic
-				).join('')
+				if (target.src.includes('h_1,w_1/')) {
+					const urlParts = target.src.split('h_1,w_1/');
+					target.src = [].concat(
+						urlParts[0], // base
+						target.dataset.replace, // new dimensions
+						urlParts[1] // actual pic
+					).join('')
+				}
 			});
 		}
 
