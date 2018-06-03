@@ -226,7 +226,7 @@
 	<div class="container--sites">
 		<div class="card">
 			<a href="http://www.plays.gratis" target="_blank">
-				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif" data-replace="c_scale,w_590/"
+				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif" data-replace="h_590,w_590"
 				 alt="plays.gratis">
 				<div class="title--card">
 					plays.gratis
@@ -235,7 +235,7 @@
 		</div>
 		<div class="card">
 			<a href="http://www.sadness.online" target="_blank">
-				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/sadness.gif" alt="sadness.online">
+				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sadness.gif" alt="sadness.online">
 				<div class="title--card">
 					sadness.online
 				</div>
@@ -250,7 +250,7 @@
 	<div class="container--sites">
 		<div class="card">
 			<a href="https://www.cashflowcalc.net" target="_blank">
-				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/cashflow.gif" alt="cashflowcalc.net">
+				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528061749/trevorlitsey.com/cashflow.gif" alt="cashflowcalc.net">
 				<div class="title--card">
 					cashflowcalc.net
 				</div>
@@ -258,8 +258,7 @@
 		</div>
 		<div class="card">
 			<a href="https://www.grantsreminder.com" target="_blank">
-				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/grantsreminder.gif" data-replace="c_scale,w_590/"
-				 alt="grantsreminder.com">
+				<img src="https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528059337/trevorlitsey.com/grantsreminder.gif" alt="grantsreminder.com">
 				<div class="title--card">
 					grantsreminder.com
 				</div>
@@ -306,9 +305,14 @@
 
 		// ---------
 		function loadImage(entries) {
-			entries.filter(isIntersecting).forEach(({ target }) =>
-				target.src = [].concat('https://res.cloudinary.com/sadness/image/upload/', target.dataset.replace, 'v1525134507/trevorlitsey.com/', target.src.split('trevorlitsey.com/')[1]).join('')
-			);
+			entries.filter(isIntersecting).forEach(({ target }) => {
+				const urlParts = target.src.split('h_1,w_1');
+				target.src = [].concat(
+					urlParts[0], // base
+					target.dataset.replace, // new dimensions
+					urlParts[1] // actual pic
+				).join('')
+			});
 		}
 
 		function isIntersecting(node) {
