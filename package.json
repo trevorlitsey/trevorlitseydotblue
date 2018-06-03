@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser"
+    "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser",
+    "build": "autoprefixer-cli -o style.prefix.css style.css && uglifycss style.prefix.css > style.min.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.13"
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.18.13",
+    "uglifycss": "0.0.29"
   }
 }
