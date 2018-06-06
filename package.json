@@ -5,13 +5,22 @@
   "main": "index.html",
   "scripts": {
     "start": "browser-sync start --server --files '**/*.css, **/*.html, **/*.js, !node_modules/**/*' --directory --port 7777 --browser",
-    "build": "autoprefixer-cli -o style.prefix.css style.css && uglifycss style.prefix.css > style.min.css"
+    "build": "NODE_ENV=production webpack"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.18.13",
-    "uglifycss": "0.0.29"
+    "clean-webpack-plugin": "^0.1.19",
+    "critters-webpack-plugin": "^1.0.0",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.2",
+    "postcss-loader": "^2.1.5",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "^4.11.1",
+    "webpack-cli": "^3.0.2"
   }
 }
