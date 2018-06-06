@@ -1,3 +1,4 @@
+import "intersection-observer";
 import "./style.css";
 
 // lazy load images
@@ -30,11 +31,3 @@ function loadImage(entries) {
 function isIntersecting(node) {
   return node.isIntersecting;
 }
-
-// intersection observer polyfill
-(function(undefined) {}.call(
-  ("object" === typeof window && window) ||
-    ("object" === typeof self && self) ||
-    ("object" === typeof global && global) ||
-    {},
-));
