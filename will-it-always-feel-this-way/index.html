@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>will it always feel this way</title>
+</head>
+
+<body>
+
+	<h1>will it always have to feel this way</h1>
+
+	<style>
+		@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+		body {
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: rgb(51, 132, 255);
+			color: white;
+			font-family: 'Open Sans Condensed', sans-serif;
+			font-size: calc(8px + 1vw);
+			text-align: center;
+			animation: AnimationName 30s ease infinite;
+			background: linear-gradient(83deg, #599bff, #006be6);
+			background-size: 400% 400%;
+			letter-spacing: 10px;
+		}
+
+		span {
+			transition: color 2s, opacity 2s;
+		}
+
+		span.on {
+			color: #fff !important;
+			opacity: .2 !important;
+		}
+
+		@keyframes AnimationName {
+			0% {
+				background-position: 0% 50%
+			}
+			50% {
+				background-position: 100% 50%
+			}
+			100% {
+				background-position: 0% 50%
+			}
+		}
+	</style>
+
+	<script>
+
+		const text = document.querySelector('h1');
+
+		text.innerHTML = text.innerHTML.split('').map(letter => `<span>${letter}</span>`).join('');
+
+		const spans = document.querySelectorAll('span');
+
+		for (let span of spans) {
+			span.style.color = getRandomBlue();
+		}
+
+		requestAnimationFrame(() => pop(spans))
+
+		async function pop(spans) {
+			const span = spans[Math.floor(Math.random() * spans.length)];
+			if (span.classList[0] !== 'on') {
+				span.classList.add('on')
+				span.addEventListener('transitionend', function () {
+					this.classList.remove('on');
+				});
+			}
+			await wait(100);
+			requestAnimationFrame(() => pop(spans))
+		}
+
+		function wait(num) {
+			return new Promise(res => setTimeout(() => res(true), num))
+		}
+
+		function getRandomBlue() {
+			const hue = (Math.random() * 15) + 40;
+			return `hsl(221, 50%, ${hue}%)`;
+		}
+
+	</script>
+
+</body>
+
+</html>
