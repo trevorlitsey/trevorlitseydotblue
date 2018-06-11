@@ -9,10 +9,16 @@
 
 <body>
 
-	<h1>will it always have to feel this way</h1>
+	<div>why does it always have to feel this way</div>
 
 	<style>
 		@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
 
 		body {
 			margin: 0;
@@ -22,12 +28,25 @@
 			background: rgb(51, 132, 255);
 			color: white;
 			font-family: 'Open Sans Condensed', sans-serif;
-			font-size: calc(8px + 1vw);
+			font-size: calc(8px + 6vw);
 			text-align: center;
 			animation: AnimationName 30s ease infinite;
 			background: linear-gradient(83deg, #599bff, #006be6);
 			background-size: 400% 400%;
 			letter-spacing: 10px;
+			display: flex;
+			align-content: center;
+			overflow: hidden;
+		}
+
+		div {
+			margin: 0 10px;
+			width: 100%;
+			height: 100%;
+			display: grid;
+			grid-template-columns: repeat(10, 10%);
+			justify-content: center;
+			align-items: center;
 		}
 
 		span {
@@ -54,7 +73,7 @@
 
 	<script>
 
-		const text = document.querySelector('h1');
+		const text = document.querySelector('div');
 
 		text.innerHTML = text.innerHTML.split('').map(letter => `<span>${letter}</span>`).join('');
 
@@ -86,6 +105,8 @@
 			const hue = (Math.random() * 15) + 40;
 			return `hsl(221, 50%, ${hue}%)`;
 		}
+
+		// document.addEventListener('touchstart', (e) => e.preventDefault())
 
 	</script>
 
