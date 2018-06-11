@@ -80,17 +80,18 @@
 	<script>
 
 		const text = document.querySelector('div');
-
 		text.innerHTML = text.innerHTML.split('').map(letter => `<span>${letter}</span>`).join('');
-
 		const spans = document.querySelectorAll('span');
 
+		// set blues
 		for (let span of spans) {
 			span.style.color = getRandomBlue();
 		}
 
+		// go go go baby
 		requestAnimationFrame(() => pop(spans))
 
+		// --------------
 		async function pop(spans) {
 			const span = spans[Math.floor(Math.random() * spans.length)];
 			if (span.classList[0] !== 'on') {

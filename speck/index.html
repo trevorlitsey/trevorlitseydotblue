@@ -30,9 +30,8 @@
 
 		const canvas = document.querySelector('#draw');
 		const ctx = canvas.getContext('2d');
-		const currentPicture = [];
+		let started = false;
 		let blurIndex = 2;
-		let stop = false;
 		let blur = false;
 
 		function getRandomBlue() {
@@ -58,22 +57,15 @@
 			ctx.moveTo(fromX, fromY);
 			ctx.lineTo(toX + .01, toY + .01);
 			ctx.stroke();
-			currentPicture.push([[fromX, fromY], [toX, toY]]);
 		}
 
 		function beginDraw() {
-			const interval = setInterval(function () {
-				if (stop) { clearInterval(interval) }
-				for (i = 0; i < 50; i++) {
+			requestAnimationFrame(() =>
+				Array.from({ length: 400 }, () => {
 					draw();
-					if (currentPicture.length > 3000) currentPicture.splice(0, currentPicture.length - 3000);
-				}
-			}, .5)
-		}
-
-		function stopDraw() {
-			stop = !stop;
-			if (!stop) { beginDraw(); }
+				})
+			)
+			requestAnimationFrame(beginDraw)
 		}
 
 		function toggleBlur(e) {
@@ -89,29 +81,16 @@
 			ctx.lineJoin = 'round';
 			ctx.lineCap = 'round';
 			ctx.lineWidth = 5;
-			for (i = 0; i < 500; i++) {
-				const points = getRandomPoints();
-				currentPicture.push([points, points]);
+			if (!started) {
+				requestAnimationFrame(beginDraw);
+				started = true;
 			}
-			currentPicture.forEach(point => {
-				ctx.strokeStyle = getRandomBlue();
-
-				ctx.beginPath();
-				// start from
-				ctx.moveTo(point[0][0], point[0][1]);
-				// go to
-				ctx.lineTo(point[1][0], point[1][1]);
-				ctx.closePath();
-				ctx.stroke();
-
-			});
-			beginDraw();
 		}
 
 		window.addEventListener('load', resize);
+		window.addEventListener('resize', resize);
 		window.addEventListener('click', toggleBlur);
 		window.addEventListener('touchstart', toggleBlur);
-		window.addEventListener('resize', resize);
 
 	</script>
 
