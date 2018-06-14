@@ -4,11 +4,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>__ boxes</title>
+	<title>__ buzz</title>
 </head>
 
 <body>
-
 
 	<canvas></canvas>
 
@@ -19,6 +18,7 @@
 			justify-content: center;
 			align-items: center;
 			background: cornflowerblue;
+			overflow: hidden;
 		}
 
 		canvas {
@@ -30,28 +30,37 @@
 
 	<script>
 
-		var canvas = document.querySelector('canvas');
-		var context = canvas.getContext('2d');
+		const canvas = document.querySelector('canvas');
+		const context = canvas.getContext('2d');
 		context.lineWidth = 2;
 
-		var size = window.innerWidth;
+		const size = window.innerWidth;
 
-		var squareSize = 40;
-		var randomDisplacement = 4;
-		var rotateMultiplier = 4;
+		const squareSize = 40;
+		const gap = 0;
+		const randomDisplacement = 4;
+		const rotateMultiplier = 4;
+		let colors;
+		let currentIndex = 0;
 
-		function draw(width, height) {
+		function draw(width, height, color = getRandomBlue()) {
 			context.beginPath();
-			context.fillStyle = getRandomBlue();
-			context.fillRect(-width / 2, -height / 2, width, height);
+			context.fillStyle = color;
+			context.fillRect(-width, -height, width, height);
 			context.stroke();
 		}
 
-		function paintPicture() {
+		function paintPicture(num) {
+
+			if (num < currentIndex) return;
+
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			context.beginPath();
-			for (var i = ((canvas.width % squareSize) / 2); i <= canvas.width + squareSize; i += squareSize) {
-				for (var j = ((canvas.height % squareSize) / 2); j <= canvas.height + squareSize; j += squareSize) {
+			let index = 0;
+			const xPadding = canvas.width % squareSize / 2;
+			const yPadding = canvas.height % squareSize / 2;
+			for (var i = squareSize * 1.5 + xPadding; i <= canvas.width - xPadding; i += squareSize + gap) {
+				for (var j = squareSize * 1.5 + yPadding; j <= canvas.height - yPadding; j += squareSize + gap) {
 					var plusOrMinus = Math.random() < 0.5 ? -1 : 1;
 					var rotateAmt = Math.PI / 180 * plusOrMinus * Math.random() * rotateMultiplier;
 
@@ -61,19 +70,22 @@
 					context.save();
 					context.translate(i + translateAmt, j)
 					context.rotate(rotateAmt);
-					draw(squareSize, squareSize);
+					draw(squareSize, squareSize, colors[index % colors.length]);
 					context.restore();
+					index++;
 				}
 			}
-			setTimeout(() =>
-				window.requestAnimationFrame(paintPicture), 60
-			)
+
+			requestAnimationFrame(() => setTimeout(() => paintPicture(num), 65))
+
 		}
 
 		function resize() {
+			currentIndex++;
 			canvas.width = window.innerWidth - squareSize;
 			canvas.height = window.innerHeight - squareSize;
-			paintPicture();
+			colors = Array.from({ length: Math.floor(Math.random() * 10 + 4) }, getRandomBlue)
+			paintPicture(currentIndex);
 		}
 
 		function getRandomBlue() {
@@ -83,7 +95,9 @@
 
 		window.addEventListener('load', resize)
 		window.addEventListener('resize', resize);
-
+		window.addEventListener('click', resize);
+		window.addEventListener('touchstart', resize);
+		window.addEventListener('touchmove', resize);
 
 	</script>
 

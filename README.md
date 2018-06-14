@@ -11,6 +11,7 @@ Experiments of color and shape in CSS/Javascript
 - [no fun](http://www.trevorlitsey.com/nofun)
 - [shade](http://www.trevorlitsey.com/shade)
 - [speck](http://www.trevorlitsey.com/speck)
+- [buzz](http://www.trevorlitsey.com/buzz)
 - [tri](http://www.trevorlitsey.com/tri)
 - [zoom](http://www.trevorlitsey.com/zoom)
 - [i hope this feeling lasts](http://www.trevorlitsey.com/i-hope-this-feeling-lasts)
@@ -27,10 +28,6 @@ Experiments of color and shape in CSS/Javascript
 - [sweet](http://www.diypostmodern.com/sweet)
 - [this is not a sad boy](http://diypostmodern.com/thisisnotasadboy)
 
-### sadness dot online
-
-- [sadness.online](http://www.sadness.online)
-
 ### this is not a sad boy dot com
 
 - [a fair amount of failures](http://www.thisisnotasadboy.com/a-fair-amount-of-failures)
@@ -39,3 +36,7 @@ Experiments of color and shape in CSS/Javascript
 - [ptrk](http://www.thisisnotasadboy.com/ptrk)
 - [you make me laugh but its not funny](http://www.thisisnotasadboy.com/youmakemelaughbutitsnotfunny)
 - [gray](http://www.thisisnotasadboy.com/gray)
+
+### sadness dot online
+
+- [sadness.online](http://www.sadness.online)
