@@ -27,6 +27,7 @@ Experiments of color and shape in CSS/Javascript
 - [sol289](http://www.diypostmodern.com/sol289)
 - [sweet](http://www.diypostmodern.com/sweet)
 - [this is not a sad boy](http://diypostmodern.com/thisisnotasadboy)
+- [ernst](http://diypostmodern.com/ernst)
 
 ### this is not a sad boy dot com
 
