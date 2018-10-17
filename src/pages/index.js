@@ -1,14 +1,20 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
+import Card from '../components/Card'
+import Section from '../components/Section'
+import Contact from '../components/Contact'
+
+import { blues } from '../data/sites'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
+    <Section title="blue">
+      {blues.map((site, index) => (
+        <Card key={index} {...site} />
+      ))}
+    </Section>
+    <Contact />
   </Layout>
 )
 
