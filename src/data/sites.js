@@ -171,3 +171,55 @@ export const diyPostmodern = [
     label: 'gwon',
   },
 ]
+
+export const thisIsNotASadBoy = [
+  {
+    href: 'http://thisisnotasadboy.com/ptrk',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/ptrk.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/ptrk.gif',
+    label: 'ptrk',
+  },
+
+  {
+    href: 'http://thisisnotasadboy.com/a-fair-amount-of-failures',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/a-fair-amount-of-failures.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/a-fair-amount-of-failures.gif',
+    label: 'a fair amount of failures',
+  },
+  {
+    href: 'http://thisisnotasadboy.com/dotty',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/dotty.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/dotty.gif',
+    label: 'dotty',
+  },
+  {
+    href: 'http://thisisnotasadboy.com/talky',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/talky.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/talky.gif',
+    label: 'talky',
+  },
+  {
+    href: 'http://thisisnotasadboy.com/youmakemelaughbutitsnotfunny',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youmakemelaugh.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/youmakemelaugh.gif',
+    label: 'you make me laugh but its not funny',
+  },
+  {
+    href: 'http://thisisnotasadboy.com/gray',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/gray.png',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/gray.png',
+    label: 'gray',
+  },
+]
