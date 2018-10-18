@@ -3,15 +3,28 @@ import { string } from 'prop-types'
 
 import './Card.css'
 
-const Card = ({ href, imgSrc, alt, label }) => {
-  return (
-    <div className="card">
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <img src={imgSrc} alt={alt || label} />
-        <div className="title--card">{label}</div>
-      </a>
-    </div>
-  )
+class Card extends React.Component {
+  state = {
+    src: null,
+  }
+
+  componentDidMount = () => {
+    this.setState({ src: this.props.imgSrc })
+  }
+
+  render() {
+    const { href, alt, label, placeholderImgSrc } = this.props
+    const { src } = this.state
+
+    return (
+      <div className="card">
+        <a href={href} target="_blank" rel="noopener noreferrer">
+          <img src={src || placeholderImgSrc} alt={alt || label} />
+          <div className="title--card">{label}</div>
+        </a>
+      </div>
+    )
+  }
 }
 
 Card.propTypes = {
