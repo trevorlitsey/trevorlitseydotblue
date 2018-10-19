@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import './Layout.css'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, ...props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -27,7 +27,7 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <div>{children}</div>
+        <div {...props}>{children}</div>
       </>
     )}
   />
