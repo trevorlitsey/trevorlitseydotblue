@@ -17,6 +17,10 @@ body {
   animation: rotate 1.8s linear infinite;
 }
 
+.container span {
+  font-weight: 350;
+}
+
 h1 {
   margin: 0;
 }

@@ -6,7 +6,9 @@ import './404.css'
 const NotFoundPage = () => (
   <Layout>
     <div class="container">
-      <h1>4☹4</h1>
+      <h1>
+        4<span>☹</span>4
+      </h1>
     </div>
   </Layout>
 )
