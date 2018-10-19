@@ -223,3 +223,65 @@ export const thisIsNotASadBoy = [
     label: 'gray',
   },
 ]
+
+export const freelance = [
+  {
+    href: 'http://www.plays.gratis',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_590,w_590/v1528057225/trevorlitsey.com/nob.gif',
+    label: 'plays.gratis',
+  },
+  {
+    href: 'http://www.sadness.online',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sadness.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/sadness.gif',
+    label: 'sadness.online',
+  },
+]
+
+export const projects = [
+  {
+    href: 'http://www.grantcenter.io',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1535398785/trevorlitsey.com/grantcenter.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1535398785/trevorlitsey.com/grantcenter.gif',
+    label: 'grantcenter.io',
+  },
+  {
+    href: 'http://www.cashflowcalc.net',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528061749/trevorlitsey.com/cashflow.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1528061749/trevorlitsey.com/cashflow.gif',
+    label: 'cashflowcalc.net',
+  },
+  {
+    href: 'http://www.grantsreminder.com',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528059337/trevorlitsey.com/grantsreminder.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1528059337/trevorlitsey.com/grantsreminder.gif',
+    label: 'grantsreminder.com',
+  },
+  {
+    href: 'http://www.boilerplateboilerplate.xyz',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/boilerplate.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/boilerplate.gif',
+    label: 'boilerplateboilerplate.xyz',
+  },
+  {
+    href: 'http://www.youtubeanalyzer.com',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
+    label: 'youtubeanalyzer.com',
+  },
+]
