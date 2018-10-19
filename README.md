@@ -38,6 +38,15 @@ Experiments of color and shape in CSS/Javascript
 - [you make me laugh but its not funny](http://www.thisisnotasadboy.com/youmakemelaughbutitsnotfunny)
 - [gray](http://www.thisisnotasadboy.com/gray)
 
-### sadness dot online
+### freelance
 
+- [plays.gratis](http://www.plays.gratis)
 - [sadness.online](http://www.sadness.online)
+
+### projects
+
+- [grantcenter.io](http://www.grantcenter.io)
+- [cashflowcalc.net](http://www.cashflowcalc.net)
+- [grantsreminder.com](http://www.grantsreminder.com)
+- [boilerplateboilerplate.xyz](http://www.boilerplateboilerplate.xyz)
+- [youtubeanalyzer.com](http://www.youtubeanalyzer.com)
