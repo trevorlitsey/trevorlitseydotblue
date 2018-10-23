@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'trevor litsey',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -8,10 +8,10 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: 'trevorlitsey.com',
-        short_name: 'starter',
+        short_name: 'trevor',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#fff',
+        theme_color: '#fff',
         display: 'minimal-ui',
         icon: 'src/images/josef.png', // This path is relative to the root of the site.
       },
