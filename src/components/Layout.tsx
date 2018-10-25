@@ -1,13 +1,19 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import { node } from 'prop-types'
+import styled from 'styled-components'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import SideNav from './SideNav'
+import { Wrapper } from './elements'
 
 import './Layout.css'
 
-const Layout = ({ children, currentUrlPath, ...props }) => (
+interface Props {
+  currentUrlPath: string
+}
+
+const Layout: React.SFC<Props> = ({ children, currentUrlPath, ...props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -47,15 +53,11 @@ const Layout = ({ children, currentUrlPath, ...props }) => (
         </Helmet>
         <div className="layout" {...props}>
           <SideNav currentUrlPath={currentUrlPath} />
-          {children}
+          <Wrapper>{children}</Wrapper>
         </div>
       </>
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

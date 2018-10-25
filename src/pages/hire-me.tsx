@@ -2,10 +2,16 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 
-const AboutPage = ({ location: { pathname } }) => {
+interface Props {
+  location: {
+    pathname: string
+  }
+}
+
+const AboutPage: React.SFC<Props> = ({ location: { pathname } }) => {
   return (
     <Layout currentUrlPath={pathname}>
-      <h1>Blue</h1>
+      <h1>Hire Me!</h1>
     </Layout>
   )
 }
