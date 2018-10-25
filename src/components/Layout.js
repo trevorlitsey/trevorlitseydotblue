@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
+import SideNav from './SideNav'
+
 import './Layout.css'
 
-const Layout = ({ children, ...props }) => (
+const Layout = ({ children, currentUrlPath, ...props }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -43,7 +45,10 @@ const Layout = ({ children, ...props }) => (
         >
           <html lang="en" />
         </Helmet>
-        <div {...props}>{children}</div>
+        <div className="layout" {...props}>
+          <SideNav currentUrlPath={currentUrlPath} />
+          {children}
+        </div>
       </>
     )}
   />
