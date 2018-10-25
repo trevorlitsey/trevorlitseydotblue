@@ -27,13 +27,13 @@ const IndexPage: React.SFC<Props> = ({ location: { pathname } }) => (
         understand.
       </p>
       <p>
-        I don't really put a whole lot of information out into the world, so
+        I don't really put a whole lot of information out into the world, but
         this is where I share things that I'm working on, things I like, things
         I'm interested in, etc.
       </p>
       <p>
         Sometimes I make things that are <Link to="/blue">blue</Link>. Sometimes
-        I make <Link to="/diypostmodern">shapes</Link>. Sometimes I make{' '}
+        I make <Link to="/diypostmodern">shapes</Link>. Usually I'm making{' '}
         <Link to="/projects">web applications</Link>.
       </p>
       <p>Please stick around. I hope you enjoy. It's good to have you.</p>
