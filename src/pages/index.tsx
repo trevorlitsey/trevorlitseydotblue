@@ -23,10 +23,6 @@ const IndexPage: React.SFC<Props> = ({ location: { pathname } }) => (
     <TextContent>
       <p>Hi. My name is Trevor. Welcome.</p>
       <p>
-        Putting emojis on your website is very ~cool~ these days, from what I
-        understand.
-      </p>
-      <p>
         I'm a web developer and arts administrator living in Minneapolis, MN.
       </p>
       <p>

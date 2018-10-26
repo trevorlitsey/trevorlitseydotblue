@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 import { TextContent } from '../components/elements'
@@ -30,6 +30,10 @@ const peopleLinks = [
     href: 'http://mitch.digital',
     label: 'mitch',
   },
+  {
+    href: 'http://plays.gratis',
+    label: 'noah',
+  },
 ]
 
 const musicLinks = [
@@ -46,15 +50,25 @@ interface LinkListProps {
   }>
 }
 
+// typescript wines about returning an array of elements :(
 const LinkList: React.SFC<LinkListProps> = ({ links }) => {
-  return links.map(({ label, href }) => (
-    <p>
-      <strong style={{ paddingBottom: 10 }}>{label}</strong>: <br />
-      <a className="no-underline" href={href} target="__blank" rel="noopener">
-        {href}
-      </a>
-    </p>
-  ))
+  return (
+    <Fragment>
+      {links.map(({ label, href }) => (
+        <p>
+          <strong style={{ paddingBottom: 10 }}>{label}</strong>: <br />
+          <a
+            className="no-underline"
+            href={href}
+            target="__blank"
+            rel="noopener"
+          >
+            {href}
+          </a>
+        </p>
+      ))}
+    </Fragment>
+  )
 }
 
 const LinksTitle = styled.p`
@@ -74,7 +88,10 @@ const LinksPage: React.SFC<LinksPageProps> = ({ location: { pathname } }) => {
       <h1>Links 🔗</h1>
       <TextContent>
         <p style={{ textAlign: 'center' }}>
-          <i>a growing list, in no particular order</i>
+          <i>
+            a growing list of friends and interest, in no particular order, à la
+            1995
+          </i>
         </p>
         <LinksTitle>Art:</LinksTitle>
         <LinkList links={artLinks} />

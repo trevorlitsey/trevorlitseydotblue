@@ -35,10 +35,11 @@ const links = [
 const Wrapper = styled.div`
   background: white;
   box-shadow: ${elevation1}, 1px 1px 10px rgba(0, 0, 0, 0.05);
-  height: 100vh;
+  height: 100%;
   padding: 40px 40px 40px 10px;
 
   ul {
+    overflow-y: scroll;
     padding: 10px;
     list-style: none;
     margin: auto;

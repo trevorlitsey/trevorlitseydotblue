@@ -19,11 +19,8 @@ const Container = styled.div`
 `
 
 export const Wrapper = styled.div`
-  padding: 20px 40px;
+  padding: 20px 20px 40px;
   overflow: scroll;
-
-  @media (max-width: ${smallScreen}px) {
-  }
 `
 
 interface Props {
