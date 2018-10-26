@@ -6,6 +6,8 @@ import { smallScreen } from '../styles/screenSizes'
 
 import SideNav from './SideNav'
 
+import '../styles/globals.css'
+
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr 8fr;

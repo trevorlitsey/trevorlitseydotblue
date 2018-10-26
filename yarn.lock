@@ -1429,7 +1429,7 @@ babel-plugin-remove-graphql-queries@^2.0.2-rc.3:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-remove-graphql-queries/-/babel-plugin-remove-graphql-queries-2.5.0.tgz#975e8bc9452133984e44eee99743b6599dafce25"
 
-"babel-plugin-styled-components@>= 1":
+"babel-plugin-styled-components@>= 1", babel-plugin-styled-components@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-styled-components/-/babel-plugin-styled-components-1.8.0.tgz#9dd054c8e86825203449a852a5746f29f2dab857"
   dependencies:
@@ -3322,7 +3322,7 @@ eslint-plugin-import@^2.9.0:
     read-pkg-up "^2.0.0"
     resolve "^1.6.0"
 
-eslint-plugin-jsx-a11y@^6.0.3, eslint-plugin-jsx-a11y@^6.1.2:
+eslint-plugin-jsx-a11y@^6.0.3:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.1.2.tgz#69bca4890b36dcf0fe16dd2129d2d88b98f33f88"
   dependencies:
@@ -4023,6 +4023,12 @@ gatsby-plugin-page-creator@^2.0.1:
 gatsby-plugin-react-helmet@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-react-helmet/-/gatsby-plugin-react-helmet-3.0.0.tgz#d833a7f7f65b6d2c5adb2d99095a7bd3882d33cd"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+
+gatsby-plugin-styled-components@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-styled-components/-/gatsby-plugin-styled-components-3.0.0.tgz#f78f3e2ca5e20651a32b5c8b4deb46c3e7a4d743"
   dependencies:
     "@babel/runtime" "^7.0.0"
 
