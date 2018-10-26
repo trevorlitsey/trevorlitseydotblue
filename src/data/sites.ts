@@ -93,9 +93,9 @@ export const diyPostmodern = [
   {
     href: 'http://diypostmodern.com/on-a-clear-day',
     placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/bars.gif',
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/on-a-clear-day.gif',
     imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/bars.gif',
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/on-a-clear-day.gif',
     label: 'on a clear day',
   },
   {

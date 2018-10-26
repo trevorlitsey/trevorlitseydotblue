@@ -1,14 +1,10 @@
 {
   "defaultSeverity": "error",
-  "extends": [
-    "tslint:latest",
-    "tslint-react",
-    "tslint-config-prettier",
-    "plugin:jsx-a11y/recommended"
-  ],
-  "plugins": ["jsx-a11y"],
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier"],
   "jsRules": {},
   "rules": {
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
     "interface-name": false,
     "no-console": [false],
     "no-var-requires": true,

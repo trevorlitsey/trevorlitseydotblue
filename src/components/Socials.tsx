@@ -10,10 +10,13 @@ const Wrapper = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: ${elevation1};
   margin: 20px auto;
-  max-width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px;
 
-  padding: 10px;
-  max-height: 40px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   text-align: center;
   svg {
     height: 20px;

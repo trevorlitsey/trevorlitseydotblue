@@ -1,7 +1,9 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import { TextContent } from '../components/elements'
+import SitesList from '../components/SitesList'
+
+import { diyPostmodern } from '../data/sites'
 
 interface Props {
   location: {
@@ -15,7 +17,7 @@ const DIYPostmodernPage: React.SFC<Props> = ({ location: { pathname } }) => {
       <h1>
         DIY Postmodern <span>⌇</span>
       </h1>
-      <TextContent>DIY baby!</TextContent>
+      <SitesList sites={diyPostmodern} />
     </Layout>
   )
 }

@@ -2,8 +2,8 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-import './SideNav.css'
 import { elevation1 } from '../styles/elevation'
+import { smallScreen } from '../styles/screenSizes'
 
 const links = [
   {
@@ -34,13 +34,12 @@ const links = [
 
 const Wrapper = styled.div`
   background: white;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15), 1px 1px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: ${elevation1}, 1px 1px 10px rgba(0, 0, 0, 0.05);
   height: 100vh;
   padding: 40px 40px 40px 10px;
 
   ul {
-    margin: 0;
-    padding: 0px;
+    padding: 10px;
     list-style: none;
     margin: auto;
   }
@@ -48,11 +47,12 @@ const Wrapper = styled.div`
   ul li {
     padding: 10px;
     white-space: nowrap;
+    display: grid;
+    grid-template-columns: 24px 4fr;
   }
 
   ul li span.pointer {
     color: rgba(0, 0, 0, 0);
-    margin-right: 8px;
   }
 
   ul li span.pointer.on {
@@ -68,16 +68,20 @@ const Wrapper = styled.div`
     color: inherit;
   }
 
-  @media screen and (max-width: 620px) {
-    background: white;
-    box-shadow: ${elevation1};
+  .fullwidth {
+    grid-column: span 2;
+    text-align: center;
+    padding: 4px;
+  }
+
+  @media screen and (max-width: ${smallScreen}px) {
+    display: flex;
     height: auto;
-    padding: 20px;
+    padding: 10px;
 
     ul {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-gap: 10px;
+      padding: 0px;
+      margin: auto;
     }
   }
 `
@@ -88,12 +92,10 @@ const SideNav = ({ currentUrlPath = '' }) => {
       <ul>
         {links.map(({ to, label }) => (
           <li key={to}>
-            <Link to={to}>
-              <span className={`pointer ${currentUrlPath === to && 'on'}`}>
-                →
-              </span>{' '}
-              {label}
-            </Link>
+            <span className={`pointer ${currentUrlPath === to && 'on'}`}>
+              →
+            </span>{' '}
+            <Link to={to}>{label}</Link>
           </li>
         ))}
       </ul>

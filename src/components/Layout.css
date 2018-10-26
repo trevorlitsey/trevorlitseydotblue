@@ -13,14 +13,16 @@ h1 {
   text-align: center;
 }
 
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 8fr;
+a {
+  color: inherit;
 }
 
-@media (max-width: 620px) {
-  .layout {
-    grid-template-rows: 1fr 2fr;
-    grid-template-columns: 1fr;
-  }
+a.no-underline {
+  text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
