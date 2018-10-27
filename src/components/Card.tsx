@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+
+import Image from './Image'
 import { gray1 } from '../styles/colors'
 import { elevation2 } from '../styles/elevation'
 
@@ -45,37 +47,28 @@ interface Props {
   label: string
 }
 
-interface State {
-  src: string | null
-}
+const Card: React.SFC<Props> = ({
+  href,
+  alt,
+  label,
+  placeholderImgSrc,
+  imgSrc,
+}) => (
+  <Wrapper>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <Image
+        placeholder={placeholderImgSrc}
+        src={imgSrc}
+        alt={alt}
+        label={label}
+      />
+      <div className="title--card">{label}</div>
+    </a>
+  </Wrapper>
+)
 
-class Card extends React.Component<Props, State> {
-  public static defaultProps = {
-    href: '#',
-    label: 'Label Me Please',
-  }
-
-  public state = {
-    src: null,
-  }
-
-  public componentDidMount = () => {
-    this.setState({ src: this.props.imgSrc })
-  }
-
-  public render() {
-    const { href, alt, label, placeholderImgSrc } = this.props
-    const { src } = this.state
-
-    return (
-      <Wrapper>
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          <img src={src || placeholderImgSrc} alt={alt || label} />
-          <div className="title--card">{label}</div>
-        </a>
-      </Wrapper>
-    )
-  }
+Card.defaultProps = {
+  href: '#',
 }
 
 export default Card
