@@ -19,6 +19,10 @@ const links = [
     label: 'diy postmodern',
   },
   {
+    to: '/thisisnotasadboy',
+    label: 'this is not a sad boy',
+  },
+  {
     to: '/webapps',
     label: 'web apps',
   },
@@ -91,14 +95,18 @@ const SideNav = ({ currentUrlPath = '' }) => {
   return (
     <Wrapper>
       <ul>
-        {links.map(({ to, label }) => (
-          <li key={to}>
-            <span className={`pointer ${currentUrlPath === to && 'on'}`}>
-              →
-            </span>{' '}
-            <Link to={to}>{label}</Link>
-          </li>
-        ))}
+        {links.map(({ to, label }) => {
+          const isIndex = to === '/'
+          const on =
+            (!isIndex && currentUrlPath.includes(to)) ||
+            (isIndex && currentUrlPath === to)
+          return (
+            <li key={to}>
+              <span className={`pointer ${on && 'on'}`}>→</span>{' '}
+              <Link to={to}>{label}</Link>
+            </li>
+          )
+        })}
       </ul>
     </Wrapper>
   )
