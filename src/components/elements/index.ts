@@ -2,9 +2,14 @@ import styled from 'styled-components'
 import { gray1 } from '../../styles/colors'
 import { elevation1 } from '../../styles/elevation'
 
+interface TextContentProps {
+  margin?: string
+  maxWidth?: number
+}
+
 export const TextContent = styled.div`
-  margin: auto;
-  max-width: 600px;
+  margin: ${(props: TextContentProps) => props.margin || 'auto'};
+  max-width: ${(props: TextContentProps) => props.maxWidth || 600}px;
   background: rgba(255, 255, 255, 1);
   border: 1px solid ${gray1};
   padding: 30px;

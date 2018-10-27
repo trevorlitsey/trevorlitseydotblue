@@ -13,7 +13,7 @@ export const blues = [
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/tri.png',
     imgSrc:
       'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/tri.png',
-    label: 'bars',
+    label: 'tri',
   },
   {
     href: 'https://trebor.blue/shade',
