@@ -24,6 +24,10 @@ const Wrapper = styled.div`
     text-decoration: none;
   }
 
+  h2 {
+    word-break: break-all;
+  }
+
   .content {
     padding-left: 20px;
   }
@@ -47,7 +51,7 @@ const Wrapper = styled.div`
     margin-right: 4px;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 920px) {
     display: block;
   }
 `
@@ -78,7 +82,12 @@ const List: React.SFC<ListProps> = ({ projects }) => {
   return (
     <Fragment>
       {projects.map(project => (
-        <TextContent key={project.imgSrc} maxWidth={800} margin="20px auto">
+        <TextContent
+          key={project.imgSrc}
+          padding="20px"
+          maxWidth={800}
+          margin="20px auto"
+        >
           <Wrapper>
             <a href={project.href} target="_blank" rel="noopener noreferrer">
               <Image
