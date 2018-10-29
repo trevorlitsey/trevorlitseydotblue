@@ -28,7 +28,7 @@ const IndexPage: React.SFC<Props> = ({ location: { pathname } }) => (
       <p>
         Sometimes I make things that are <Link to="/blue">blue</Link>. Sometimes
         I make <Link to="/diypostmodern">shapes</Link>. Usually I'm making{' '}
-        <Link to="/projects">web applications</Link>.
+        <Link to="/webapps">web applications</Link>.
       </p>
       <p>Please stick around. I hope you enjoy. It's good to have you.</p>
     </TextContent>

@@ -5,7 +5,7 @@ const placeholderSquare = require('../images/whiteSquare.png')
 
 interface Props {
   alt?: string
-  label: string
+  label?: string
   placeholder: string
   src: string
 }

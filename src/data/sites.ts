@@ -251,6 +251,15 @@ export const projects = [
     imgSrc:
       'https://res.cloudinary.com/sadness/image/upload/v1535398785/trevorlitsey.com/grantcenter.gif',
     label: 'grantcenter.io',
+    title: 'GrantCenter.io',
+    description:
+      'This is a description description description description description description',
+    tech: [
+      {
+        name: 'React',
+        link: 'http://reactjs.org',
+      },
+    ],
   },
   {
     href: 'http://www.cashflowcalc.net',
