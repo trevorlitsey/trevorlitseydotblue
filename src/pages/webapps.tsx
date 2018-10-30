@@ -88,7 +88,7 @@ const List: React.SFC<ListProps> = ({ projects }) => {
       {projects.map(project => (
         <TextContent
           key={project.imgSrc}
-          padding="20px"
+          padding="15px"
           maxWidth={800}
           margin="20px auto"
         >
