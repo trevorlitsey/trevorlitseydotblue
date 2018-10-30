@@ -40,14 +40,14 @@ export default [
     tech: [html, css, react, firebase, webpack, jest, cypress],
   },
   {
-    href: 'http://www.grantsreminder.com',
+    href: 'http://www.youtubeanalyzer.com',
     placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528059337/trevorlitsey.com/grantsreminder.gif',
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
     imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1528059337/trevorlitsey.com/grantsreminder.gif',
-    title: 'GrantsReminder.com',
-    description: `Single-page application application for organizing grant application reminders. Sends automatic reminder emails when deadlines approach.`,
-    tech: [html, css, react, node, firebase, jest],
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
+    title: 'YouTubeAnalyzer.com',
+    description: `Server-side rendered React app for gathering Youtube playlist/channel metadata.`,
+    tech: [html, css, react, node, youtubeAPI, zurbFoundation, flow],
   },
   {
     href: 'http://www.boilerplateboilerplate.xyz',
@@ -70,14 +70,14 @@ export default [
     ],
   },
   {
-    href: 'http://www.youtubeanalyzer.com',
+    href: 'http://www.grantsreminder.com',
     placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528059337/trevorlitsey.com/grantsreminder.gif',
     imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
-    title: 'YouTubeAnalyzer.com',
-    description: `Server-side rendered React app for gathering Youtube playlist/channel metadata.`,
-    tech: [html, css, react, node, youtubeAPI, zurbFoundation, flow],
+      'https://res.cloudinary.com/sadness/image/upload/v1528059337/trevorlitsey.com/grantsreminder.gif',
+    title: 'GrantsReminder.com',
+    description: `Single-page application application for organizing grant application reminders. Sends automatic reminder emails when deadlines approach. Precursor to grantcenter.io`,
+    tech: [html, css, react, node, firebase, jest],
   },
 ]
 
