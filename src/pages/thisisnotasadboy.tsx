@@ -14,7 +14,7 @@ interface Props {
 const BluePage: React.SFC<Props> = ({ location: { pathname } }) => {
   return (
     <Layout currentUrlPath={pathname}>
-      <h1>This is not a sad boy 😔</h1>
+      <h1>This Is Not A Sad Boy 😔</h1>
       <SitesList sites={thisIsNotASadBoy} />
     </Layout>
   )
