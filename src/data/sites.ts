@@ -13,7 +13,7 @@ export const blues = [
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/tri.png',
     imgSrc:
       'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/tri.png',
-    label: 'bars',
+    label: 'tri',
   },
   {
     href: 'https://trebor.blue/shade',
@@ -93,9 +93,9 @@ export const diyPostmodern = [
   {
     href: 'http://diypostmodern.com/on-a-clear-day',
     placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/bars.gif',
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/on-a-clear-day.gif',
     imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/bars.gif',
+      'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/on-a-clear-day.gif',
     label: 'on a clear day',
   },
   {
@@ -251,6 +251,15 @@ export const projects = [
     imgSrc:
       'https://res.cloudinary.com/sadness/image/upload/v1535398785/trevorlitsey.com/grantcenter.gif',
     label: 'grantcenter.io',
+    title: 'GrantCenter.io',
+    description:
+      'This is a description description description description description description',
+    tech: [
+      {
+        name: 'React',
+        link: 'http://reactjs.org',
+      },
+    ],
   },
   {
     href: 'http://www.cashflowcalc.net',
