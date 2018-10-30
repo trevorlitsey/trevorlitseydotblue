@@ -93,7 +93,7 @@ const LinksPage: React.SFC<LinksPageProps> = ({ location: { pathname } }) => {
       <TextContent>
         <p style={{ textAlign: 'center' }}>
           <i>
-            a growing list of friends and interest, in no particular order, in
+            a growing list of friends and interests, in no particular order, in
             the spirit of a simpler time
           </i>
         </p>
