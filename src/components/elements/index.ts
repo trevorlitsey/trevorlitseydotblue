@@ -14,6 +14,7 @@ export const TextContent = styled.div`
   background: rgba(255, 255, 255, 1);
   border: 1px solid ${gray1};
   padding: ${(props: TextContentProps) => props.padding || '30px'};
+
   p {
     padding: 10px 0;
     margin: auto;

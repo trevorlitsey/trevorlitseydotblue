@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
 import Layout from '../components/Layout'
-import SitesList from '../components/SitesList'
+import Icon from '../components/Icons'
 import Image from '../components/Image'
 import { TextContent } from '../components/elements'
 import webapps from '../data/webapps'
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 250px 2fr;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.01);
 
   img {
@@ -53,6 +53,10 @@ const Wrapper = styled.div`
 
   @media (max-width: 920px) {
     display: block;
+
+    .content {
+      padding-left: 10px;
+    }
   }
 `
 
