@@ -66,6 +66,7 @@ const LinkList: React.SFC<LinkListProps> = ({ links }) => {
             href={href}
             target="__blank"
             rel="noopener"
+            style={{ wordBreak: 'break-all' }}
           >
             {href}
           </a>
