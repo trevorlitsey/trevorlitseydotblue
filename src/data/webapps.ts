@@ -26,7 +26,7 @@ export default [
     imgSrc:
       'https://res.cloudinary.com/sadness/image/upload/v1535398785/trevorlitsey.com/grantcenter.gif',
     title: 'GrantCenter.io',
-    description: `Software-as-as-service for non-profit grant applicants. Only tool of its kind that that offers an insightful workflow for managing grant application deadlines and metadata.`,
+    description: `Software-as-a-service for non-profit grant applicants. Only tool of its kind that that offers an insightful workflow for managing grant application deadlines and metadata.`,
     tech: [html, css, react, node, graphql, mongoDb, jest, cypress],
   },
   {
