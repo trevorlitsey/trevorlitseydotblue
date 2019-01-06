@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 
 import Layout from '../components/Layout'
 import { TextContent } from '../components/elements'
@@ -15,22 +14,19 @@ interface Props {
 const IndexPage: React.SFC<Props> = ({ location: { pathname } }) => (
   <Layout currentUrlPath={pathname}>
     <h1>
-      Hello{' '}
-      <small>
-        <span>👋</span>
-      </small>
+      Hello <span>👋</span>
     </h1>
     <TextContent>
       <p>Hi. My name is Trevor. Welcome.</p>
       <p>
-        I'm a web developer and arts administrator living in Minneapolis, MN.
+        I'm a web developer and former music manager living in Minneapolis, MN.
       </p>
       <p>
-        Sometimes I make things that are <Link to="/blue">blue</Link>. Sometimes{' '}
+        Sometimes I make things that are <Link to="/blue">blue</Link>. Somtimes{' '}
         <Link to="/diypostmodern">shapes</Link>. Usually{' '}
-        <Link to="/webapps">web applications</Link>.
+        <Link to="/webapps">web apps</Link>.
       </p>
-      <p>Please stick around. I hope you enjoy. It's good to have you.</p>
+      <p>Please stick around and say hello if you feel like it. Thanks for visiting. It's good to have you.</p>
     </TextContent>
     <Socials />
   </Layout>
