@@ -4,48 +4,7 @@ import styled from 'styled-components'
 import { TextContent } from '../components/elements'
 import Layout from '../components/Layout'
 import { gray2 } from '../styles/colors'
-
-const artLinks = [
-  {
-    href: 'https://albersfoundation.org/',
-    label: 'Anni and Joseph Albers',
-  },
-  {
-    href: 'https://massmoca.org/sol-lewitt/',
-    label: 'Sol Lewitt',
-  },
-  {
-    href:
-      'https://collections.artsmia.org/art/61506/soleil-rouge-maritime-max-ernst',
-    label: 'Max Ernst',
-  },
-  {
-    href: 'https://collections.lacma.org/node/155378',
-    label: 'Agnes Martin',
-  },
-  {
-    href: 'http://recodeproject.com/',
-    label: 'The ReCode Project',
-  },
-]
-
-const peopleLinks = [
-  {
-    href: 'http://mitch.digital',
-    label: 'mitch',
-  },
-  {
-    href: 'http://plays.gratis',
-    label: 'noah',
-  },
-]
-
-const musicLinks = [
-  {
-    href: 'https://roomfulofteeth.org',
-    label: 'Roomful of Teeth',
-  },
-]
+import { artLinks, peopleLinks, musicLinks } from '../data/links'
 
 interface LinkListProps {
   links: Array<{
@@ -59,7 +18,7 @@ const LinkList: React.SFC<LinkListProps> = ({ links }) => {
   return (
     <Fragment>
       {links.map(({ label, href }) => (
-        <p>
+        <p key={href}>
           <strong style={{ paddingBottom: 10 }}>{label}</strong>: <br />
           <a
             className="no-underline"

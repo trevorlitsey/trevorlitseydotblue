@@ -18,7 +18,7 @@ const {
   bootstrap,
 } = getTech()
 
-export default [
+module.exports = [
   {
     href: 'http://www.grantcenter.io',
     placeholderImgSrc:
@@ -81,9 +81,7 @@ export default [
   },
 ]
 
-function getTech(): {
-  [x: string]: { name: string; description: string; link: string }
-} {
+function getTech() {
   return {
     html: {
       name: 'HTML',

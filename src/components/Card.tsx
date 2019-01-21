@@ -36,7 +36,6 @@ const Wrapper = styled.div`
   img {
     background: rgba(242, 242, 242, 1);
     width: 100%;
-    min-width: 100%;
   }
 `
 
