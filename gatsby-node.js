@@ -56,7 +56,7 @@ exports.createPages = async ({ graphql, actions }) => {
     path: '/webapps',
     component: projectsPageTemplate,
     context: {
-      emoji: `👨`,
+      emoji: `🍽`,
       projects: webApps,
       title: 'Web Apps',
     },
