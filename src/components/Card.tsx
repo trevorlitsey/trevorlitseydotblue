@@ -51,13 +51,11 @@ const Card: React.SFC<Props> = ({
   href,
   alt,
   label,
-  placeholderImgSrc,
   imgSrc,
 }) => (
   <Wrapper>
     <a href={href} target="_blank" rel="noopener noreferrer">
       <Image
-        placeholder={placeholderImgSrc}
         src={imgSrc}
         alt={alt}
         label={label}
