@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-// tslint:disable-next-line
-const placeholderSquare = require('../images/whiteSquare.png')
+import placeholderSquare from '../images/whiteSquare.png';
 
 interface Props {
   alt?: string
