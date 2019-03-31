@@ -270,7 +270,7 @@ exports.projects = [
     label: 'cashflowcalc.net',
   },
   {
-    href: 'https://boilerplateboilerplate.herokuapp.com/',
+    href: 'https://boilerplate-boilerplate.netlify.com/',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/boilerplate.gif',
     imgSrc:
