@@ -30,7 +30,7 @@ module.exports = [
     tech: [html, css, react, node, graphql, mongoDb, jest, cypress],
   },
   {
-    href: 'http://www.cashflowcalc.net',
+    href: 'https://cashflow-calc.netlify.com/',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528061749/trevorlitsey.com/cashflow.gif',
     imgSrc:
@@ -40,7 +40,7 @@ module.exports = [
     tech: [html, css, react, firebase, webpack, jest, cypress],
   },
   {
-    href: 'http://www.youtubeanalyzer.com',
+    href: 'https://youtube-analyzer.now.sh',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
     imgSrc:
@@ -50,7 +50,7 @@ module.exports = [
     tech: [html, css, react, node, youtubeAPI, zurbFoundation, flow],
   },
   {
-    href: 'http://www.boilerplateboilerplate.xyz',
+    href: 'https://boilerplate-boilerplate.netlify.com/',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/boilerplate.gif',
     imgSrc:
