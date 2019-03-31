@@ -1,16 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import { smallScreen } from '../styles/screenSizes'
 
 import Layout from '../components/Layout'
 
 const Wrapper = styled.div`
-  font-size: 12vw;
+  font-size: 8vw;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   animation-direction: alternate-reverse;
 
   .container {
@@ -34,6 +35,10 @@ const Wrapper = styled.div`
     to {
       transform: rotate(360deg);
     }
+  }
+
+  @media (max-width: ${smallScreen}px) {
+    height: 30vh;
   }
 `
 

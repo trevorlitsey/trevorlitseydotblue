@@ -18,7 +18,7 @@ const {
   bootstrap,
 } = getTech()
 
-export default [
+module.exports = [
   {
     href: 'http://www.grantcenter.io',
     placeholderImgSrc:
@@ -69,21 +69,9 @@ export default [
       cypress,
     ],
   },
-  {
-    href: 'http://www.grantsreminder.com',
-    placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528059337/trevorlitsey.com/grantsreminder.gif',
-    imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1528059337/trevorlitsey.com/grantsreminder.gif',
-    title: 'GrantsReminder.com',
-    description: `Single-page application application for organizing grant application reminders. Sends automatic reminder emails when deadlines approach. Precursor to grantcenter.io`,
-    tech: [html, css, react, node, firebase, jest],
-  },
 ]
 
-function getTech(): {
-  [x: string]: { name: string; description: string; link: string }
-} {
+function getTech() {
   return {
     html: {
       name: 'HTML',

@@ -1,4 +1,4 @@
-export const blues = [
+exports.blues = [
   {
     href: 'https://trebor.blue/bars',
     placeholderImgSrc:
@@ -89,7 +89,7 @@ export const blues = [
   },
 ]
 
-export const diyPostmodern = [
+exports.diyPostmodern = [
   {
     href: 'http://diypostmodern.com/on-a-clear-day',
     placeholderImgSrc:
@@ -172,7 +172,7 @@ export const diyPostmodern = [
   },
 ]
 
-export const thisIsNotASadBoy = [
+exports.thisIsNotASadBoy = [
   {
     href: 'http://thisisnotasadboy.com/ptrk',
     placeholderImgSrc:
@@ -224,7 +224,7 @@ export const thisIsNotASadBoy = [
   },
 ]
 
-export const freelance = [
+exports.freelance = [
   {
     href: 'http://www.plays.gratis',
     placeholderImgSrc:
@@ -243,7 +243,7 @@ export const freelance = [
   },
 ]
 
-export const projects = [
+exports.projects = [
   {
     href: 'http://www.grantcenter.io',
     placeholderImgSrc:

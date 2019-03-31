@@ -1,12 +1,10 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
+import { Project } from '../types'
 
 import Layout from '../components/Layout'
-import Icon from '../components/Icons'
 import Image from '../components/Image'
 import { TextContent } from '../components/elements'
-import webapps from '../data/webapps'
-import { Project } from '../types'
 
 const Wrapper = styled.div`
   display: grid;
@@ -67,6 +65,7 @@ const TechList: React.SFC<{
     {tech &&
       tech.map(tech => (
         <a
+          key={tech.name}
           className="pill"
           href={tech.link}
           target="_blank"
@@ -115,15 +114,25 @@ interface WebAppsPageProps {
   location: {
     pathname: string
   }
+  pageContext: {
+    emoji: string
+    projects: Project[]
+    title: string
+  }
 }
 
-const WebAppsPage: React.SFC<WebAppsPageProps> = ({
-  location: { pathname },
-}) => {
+const WebAppsPage: React.SFC<WebAppsPageProps> = props => {
+  const {
+    location: { pathname },
+    pageContext: { emoji, projects, title },
+  } = props
+
   return (
     <Layout currentUrlPath={pathname}>
-      <h1>Web Apps 👨‍💻</h1>
-      <List projects={webapps} />
+      <h1>
+        {title} <span>{emoji}</span>
+      </h1>
+      <List projects={projects} />
     </Layout>
   )
 }
