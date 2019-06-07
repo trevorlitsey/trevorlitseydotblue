@@ -174,7 +174,7 @@ exports.diyPostmodern = [
 
 exports.thisIsNotASadBoy = [
   {
-    href: 'http://thisisnotasadboy.com/ptrk',
+    href: 'http://thisisnotasadboy.trevorlitsey.com/ptrk',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/ptrk.gif',
     imgSrc:
@@ -183,7 +183,7 @@ exports.thisIsNotASadBoy = [
   },
 
   {
-    href: 'http://thisisnotasadboy.com/a-fair-amount-of-failures',
+    href: 'http://thisisnotasadboy.trevorlitsey.com/a-fair-amount-of-failures',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/a-fair-amount-of-failures.gif',
     imgSrc:
@@ -191,7 +191,7 @@ exports.thisIsNotASadBoy = [
     label: 'a fair amount of failures',
   },
   {
-    href: 'http://thisisnotasadboy.com/dotty',
+    href: 'http://thisisnotasadboy.trevorlitsey.com/dotty',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/dotty.gif',
     imgSrc:
@@ -199,7 +199,7 @@ exports.thisIsNotASadBoy = [
     label: 'dotty',
   },
   {
-    href: 'http://thisisnotasadboy.com/talky',
+    href: 'http://thisisnotasadboy.trevorlitsey.com/talky',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/talky.gif',
     imgSrc:
@@ -207,7 +207,8 @@ exports.thisIsNotASadBoy = [
     label: 'talky',
   },
   {
-    href: 'http://thisisnotasadboy.com/youmakemelaughbutitsnotfunny',
+    href:
+      'http://thisisnotasadboy.trevorlitsey.com/youmakemelaughbutitsnotfunny',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youmakemelaugh.gif',
     imgSrc:
@@ -215,7 +216,7 @@ exports.thisIsNotASadBoy = [
     label: 'you make me laugh but its not funny',
   },
   {
-    href: 'http://thisisnotasadboy.com/gray',
+    href: 'http://thisisnotasadboy.trevorlitsey.com/gray',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/gray.png',
     imgSrc:

@@ -17,7 +17,7 @@ interface Props {
   sites: Site[]
 }
 
-const Section: React.SFC<Props> = ({ sites, children }) => {
+const Section: React.SFC<Props> = ({ sites }) => {
   return (
     <Wrapper>
       {sites.map((site, index) => (
