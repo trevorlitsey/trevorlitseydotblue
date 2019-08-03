@@ -56,7 +56,7 @@ const Layout: React.SFC<Props> = ({ children, currentUrlPath, ...props }) => {
           { property: 'og:title', content: 'Trevor Litsey' },
           { property: 'og:type', content: 'website' },
           { property: 'og:url', content: 'http://trevorlitsey.com/' },
-          { property: 'og:image', content: '/img/josef.png' },
+          { property: 'og:image', content: 'https://res.cloudinary.com/sadness/image/upload/v1525134507/trevorlitsey.com/josef.png' },
           { property: 'og:type', content: 'website' },
           { property: 'og:site_name', content: 'trevorlitsey.com' },
         ]}
