@@ -1,6 +1,6 @@
 exports.blues = [
   {
-    href: 'https://trebor.blue/bars',
+    href: 'https://blue.trevorlitsey/bars',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/bars.gif',
     imgSrc:
@@ -8,7 +8,7 @@ exports.blues = [
     label: 'bars',
   },
   {
-    href: 'https://trebor.blue/tri',
+    href: 'https://blue.trevorlitsey/tri',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/tri.png',
     imgSrc:
@@ -16,7 +16,7 @@ exports.blues = [
     label: 'tri',
   },
   {
-    href: 'https://trebor.blue/shade',
+    href: 'https://blue.trevorlitsey/shade',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/shade.gif',
     imgSrc:
@@ -24,7 +24,7 @@ exports.blues = [
     label: 'shade',
   },
   {
-    href: 'https://trebor.blue/bigsmall',
+    href: 'https://blue.trevorlitsey/bigsmall',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/bigsmall.gif',
     imgSrc:
@@ -32,7 +32,7 @@ exports.blues = [
     label: 'big small',
   },
   {
-    href: 'https://trebor.blue/nofun',
+    href: 'https://blue.trevorlitsey/nofun',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/no-fun.gif',
     imgSrc:
@@ -40,7 +40,7 @@ exports.blues = [
     label: 'no fun',
   },
   {
-    href: 'https://trebor.blue/zoom',
+    href: 'https://blue.trevorlitsey/zoom',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/zoom.gif',
     imgSrc:
@@ -48,7 +48,7 @@ exports.blues = [
     label: 'zoom',
   },
   {
-    href: 'https://trebor.blue/speck',
+    href: 'https://blue.trevorlitsey/speck',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/speck.gif',
     imgSrc:
@@ -56,7 +56,7 @@ exports.blues = [
     label: 'speck',
   },
   {
-    href: 'https://trebor.blue/buzz',
+    href: 'https://blue.trevorlitsey/buzz',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/buzz.gif',
     imgSrc:
@@ -64,7 +64,7 @@ exports.blues = [
     label: 'buzz',
   },
   {
-    href: 'https://trebor.blue/grid',
+    href: 'https://blue.trevorlitsey/grid',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/grid.gif',
     imgSrc:
@@ -72,7 +72,7 @@ exports.blues = [
     label: 'grid',
   },
   {
-    href: 'https://trebor.blue/float',
+    href: 'https://blue.trevorlitsey/float',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/float.gif',
     imgSrc:
@@ -80,7 +80,7 @@ exports.blues = [
     label: 'float',
   },
   {
-    href: 'https://trebor.blue/i-hope-this-feeling-lasts',
+    href: 'https://blue.trevorlitsey/i-hope-this-feeling-lasts',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/i-hope-this-feeling-lasts.gif',
     imgSrc:
