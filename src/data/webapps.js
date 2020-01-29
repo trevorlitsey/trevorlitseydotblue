@@ -40,6 +40,16 @@ module.exports = [
     tech: [html, css, react, firebase, webpack, jest, cypress],
   },
   {
+    href: 'https://msp-bus-tracker.netlify.com/',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528061749/trevorlitsey.com/msp-bus-tracker.gif',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/v1528061749/trevorlitsey.com/msp-bus-tracker.gif',
+    title: 'MspBusTracker.com',
+    description: `Single-page application for getting real-time bus departures from Minneapolis/St. Paul Metro Transit.`,
+    tech: [html, css, react, node],
+  },
+  {
     href: 'https://youtube-analyzer.now.sh',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youtubeanalyzer.gif',
