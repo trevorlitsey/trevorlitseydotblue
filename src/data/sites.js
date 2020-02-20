@@ -232,10 +232,18 @@ exports.fun = [
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/winow-waffle.jpg',
     imgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_590,w_590/v1528057225/trevorlitsey.com/winow-waffle.jpg',
-    label: 'goodnotgood',
+    label: 'good not good',
   },
   {
-    href: 'http://http://musicallaround.us/',
+    href: 'https://textmewhengustweets.trevorlitsey.com',
+    placeholderImgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/text-me-when-gus-tweets.png',
+    imgSrc:
+      'https://res.cloudinary.com/sadness/image/upload/h_590,w_590/v1528057225/trevorlitsey.com/text-me-when-gus-tweets.png',
+    label: 'text me when gus tweets',
+  },
+  {
+    href: 'http://musicallaround.us/',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif',
     imgSrc:
