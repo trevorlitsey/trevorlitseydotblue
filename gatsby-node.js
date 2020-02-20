@@ -17,15 +17,11 @@ exports.createPages = async ({ graphql, actions }) => {
     diyPostmodern,
     freelance,
     thisIsNotASadBoy,
+    fun,
   } = require(path.resolve('./src/data/sites'))
 
   const sitesPages = [
-    {
-      emoji: '🔷',
-      pagePath: '/blue',
-      sites: blues,
-      title: 'blue',
-    },
+    { emoji: '🔷', pagePath: '/blue', sites: blues, title: 'blue' },
     {
       emoji: '⌇',
       pagePath: '/diypostmodern',
@@ -37,6 +33,12 @@ exports.createPages = async ({ graphql, actions }) => {
       pagePath: '/thisisnotasadboy',
       sites: thisIsNotASadBoy,
       title: 'This Is Not A Sad Boy',
+    },
+    {
+      emoji: '✨',
+      pagePath: '/fun',
+      sites: fun,
+      title: 'Fun',
     },
   ]
 

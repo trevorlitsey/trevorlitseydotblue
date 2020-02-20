@@ -23,6 +23,10 @@ const links = [
     label: 'this is not a sad boy',
   },
   {
+    to: '/fun',
+    label: 'fun',
+  },
+  {
     to: '/webapps',
     label: 'web apps',
   },
