@@ -1,6 +1,6 @@
 exports.blues = [
   {
-    href: 'https://blue.trevorlitsey.com/bars',
+    href: 'https://blue.trevor-litsey.com/bars',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/bars.gif',
     imgSrc:
@@ -8,7 +8,7 @@ exports.blues = [
     label: 'bars',
   },
   {
-    href: 'https://blue.trevorlitsey.com/tri',
+    href: 'https://blue.trevor-litsey.com/tri',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/tri.png',
     imgSrc:
@@ -16,7 +16,7 @@ exports.blues = [
     label: 'tri',
   },
   {
-    href: 'https://blue.trevorlitsey.com/shade',
+    href: 'https://blue.trevor-litsey.com/shade',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/shade.gif',
     imgSrc:
@@ -24,7 +24,7 @@ exports.blues = [
     label: 'shade',
   },
   {
-    href: 'https://blue.trevorlitsey.com/bigsmall',
+    href: 'https://blue.trevor-litsey.com/bigsmall',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/bigsmall.gif',
     imgSrc:
@@ -32,7 +32,7 @@ exports.blues = [
     label: 'big small',
   },
   {
-    href: 'https://blue.trevorlitsey.com/nofun',
+    href: 'https://blue.trevor-litsey.com/nofun',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/no-fun.gif',
     imgSrc:
@@ -40,7 +40,7 @@ exports.blues = [
     label: 'no fun',
   },
   {
-    href: 'https://blue.trevorlitsey.com/zoom',
+    href: 'https://blue.trevor-litsey.com/zoom',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/zoom.gif',
     imgSrc:
@@ -48,7 +48,7 @@ exports.blues = [
     label: 'zoom',
   },
   {
-    href: 'https://blue.trevorlitsey.com/speck',
+    href: 'https://blue.trevor-litsey.com/speck',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/speck.gif',
     imgSrc:
@@ -56,7 +56,7 @@ exports.blues = [
     label: 'speck',
   },
   {
-    href: 'https://blue.trevorlitsey.com/buzz',
+    href: 'https://blue.trevor-litsey.com/buzz',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/buzz.gif',
     imgSrc:
@@ -64,7 +64,7 @@ exports.blues = [
     label: 'buzz',
   },
   {
-    href: 'https://blue.trevorlitsey.com/grid',
+    href: 'https://blue.trevor-litsey.com/grid',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/grid.gif',
     imgSrc:
@@ -72,7 +72,7 @@ exports.blues = [
     label: 'grid',
   },
   {
-    href: 'https://blue.trevorlitsey.com/float',
+    href: 'https://blue.trevor-litsey.com/float',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/float.gif',
     imgSrc:
@@ -80,7 +80,7 @@ exports.blues = [
     label: 'float',
   },
   {
-    href: 'https://blue.trevorlitsey.com/i-hope-this-feeling-lasts',
+    href: 'https://blue.trevor-litsey.com/i-hope-this-feeling-lasts',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/i-hope-this-feeling-lasts.gif',
     imgSrc:
@@ -91,7 +91,7 @@ exports.blues = [
 
 exports.diyPostmodern = [
   {
-    href: 'https://diypostmodern.trevorlitsey.com/on-a-clear-day',
+    href: 'https://diypostmodern.trevor-litsey.com/on-a-clear-day',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/on-a-clear-day.gif',
     imgSrc:
@@ -99,7 +99,7 @@ exports.diyPostmodern = [
     label: 'on a clear day',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/anni',
+    href: 'https://diypostmodern.trevor-litsey.com/anni',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/anni.gif',
     imgSrc:
@@ -107,7 +107,7 @@ exports.diyPostmodern = [
     label: 'annie',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/josef',
+    href: 'https://diypostmodern.trevor-litsey.com/josef',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/josef.png',
     imgSrc:
@@ -115,7 +115,7 @@ exports.diyPostmodern = [
     label: 'joseph',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/sol86',
+    href: 'https://diypostmodern.trevor-litsey.com/sol86',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sol86.gif',
     imgSrc:
@@ -123,7 +123,7 @@ exports.diyPostmodern = [
     label: 'sol 86',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/sweet',
+    href: 'https://diypostmodern.trevor-litsey.com/sweet',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sweet.gif',
     imgSrc:
@@ -131,7 +131,7 @@ exports.diyPostmodern = [
     label: 'sweet',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/sol289',
+    href: 'https://diypostmodern.trevor-litsey.com/sol289',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sol289.gif',
     imgSrc:
@@ -139,7 +139,7 @@ exports.diyPostmodern = [
     label: 'sol 289',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/r-mutt',
+    href: 'https://diypostmodern.trevor-litsey.com/r-mutt',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/r-mutt.png',
     imgSrc:
@@ -147,7 +147,7 @@ exports.diyPostmodern = [
     label: 'r. mutt',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/thisisnotasadboy',
+    href: 'https://diypostmodern.trevor-litsey.com/thisisnotasadboy',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sadboy.png',
     imgSrc:
@@ -155,7 +155,7 @@ exports.diyPostmodern = [
     label: 'this is not a sad boy',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/ernst',
+    href: 'https://diypostmodern.trevor-litsey.com/ernst',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/ernst.gif',
     imgSrc:
@@ -163,7 +163,7 @@ exports.diyPostmodern = [
     label: 'ernst',
   },
   {
-    href: 'https://diypostmodern.trevorlitsey.com/gwon',
+    href: 'https://diypostmodern.trevor-litsey.com/gwon',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/gwon.gif',
     imgSrc:
@@ -174,7 +174,7 @@ exports.diyPostmodern = [
 
 exports.thisIsNotASadBoy = [
   {
-    href: 'https://thisisnotasadboy.trevorlitsey.com/ptrk',
+    href: 'https://thisisnotasadboy.trevor-litsey.com/ptrk',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/ptrk.gif',
     imgSrc:
@@ -183,7 +183,8 @@ exports.thisIsNotASadBoy = [
   },
 
   {
-    href: 'https://thisisnotasadboy.trevorlitsey.com/a-fair-amount-of-failures',
+    href:
+      'https://thisisnotasadboy.trevor-litsey.com/a-fair-amount-of-failures',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/a-fair-amount-of-failures.gif',
     imgSrc:
@@ -191,7 +192,7 @@ exports.thisIsNotASadBoy = [
     label: 'a fair amount of failures',
   },
   {
-    href: 'https://thisisnotasadboy.trevorlitsey.com/dotty',
+    href: 'https://thisisnotasadboy.trevor-litsey.com/dotty',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/dotty.gif',
     imgSrc:
@@ -199,7 +200,7 @@ exports.thisIsNotASadBoy = [
     label: 'dotty',
   },
   {
-    href: 'https://thisisnotasadboy.trevorlitsey.com/talky',
+    href: 'https://thisisnotasadboy.trevor-litsey.com/talky',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/talky.gif',
     imgSrc:
@@ -208,7 +209,7 @@ exports.thisIsNotASadBoy = [
   },
   {
     href:
-      'https://thisisnotasadboy.trevorlitsey.com/youmakemelaughbutitsnotfunny',
+      'https://thisisnotasadboy.trevor-litsey.com/youmakemelaughbutitsnotfunny',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youmakemelaugh.gif',
     imgSrc:
@@ -216,7 +217,7 @@ exports.thisIsNotASadBoy = [
     label: 'you make me laugh but its not funny',
   },
   {
-    href: 'https://thisisnotasadboy.trevorlitsey.com/gray',
+    href: 'https://thisisnotasadboy.trevor-litsey.com/gray',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/gray.png',
     imgSrc:
@@ -227,7 +228,7 @@ exports.thisIsNotASadBoy = [
 
 exports.fun = [
   {
-    href: 'https://goodnotgood.trevorlitsey.com',
+    href: 'https://goodnotgood.trevor-litsey.com',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/winow-waffle.jpg',
     imgSrc:
@@ -235,7 +236,7 @@ exports.fun = [
     label: 'good not good',
   },
   {
-    href: 'https://textmewhengustweets.trevorlitsey.com',
+    href: 'https://textmewhengustweets.trevor-litsey.com',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/text-me-when-gus-tweets.png',
     imgSrc:

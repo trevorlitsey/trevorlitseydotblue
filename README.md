@@ -1,3 +1,3 @@
 # trevorlitsey.com
 
-My website, [trevorlitsey.com](http://trevorlitsey.com).
+My website, [trevorlitsey.com](https://trevor-litsey.com).
