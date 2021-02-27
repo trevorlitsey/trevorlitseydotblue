@@ -91,7 +91,7 @@ exports.blues = [
 
 exports.diyPostmodern = [
   {
-    href: 'http://diypostmodern.com/on-a-clear-day',
+    href: 'https://diypostmodern.trevorlitsey.com/on-a-clear-day',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/on-a-clear-day.gif',
     imgSrc:
@@ -99,7 +99,7 @@ exports.diyPostmodern = [
     label: 'on a clear day',
   },
   {
-    href: 'http://diypostmodern.com/anni',
+    href: 'https://diypostmodern.trevorlitsey.com/anni',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/anni.gif',
     imgSrc:
@@ -107,7 +107,7 @@ exports.diyPostmodern = [
     label: 'annie',
   },
   {
-    href: 'http://diypostmodern.com/josef',
+    href: 'https://diypostmodern.trevorlitsey.com/josef',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/josef.png',
     imgSrc:
@@ -115,7 +115,7 @@ exports.diyPostmodern = [
     label: 'joseph',
   },
   {
-    href: 'http://diypostmodern.com/sol86',
+    href: 'https://diypostmodern.trevorlitsey.com/sol86',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sol86.gif',
     imgSrc:
@@ -123,7 +123,7 @@ exports.diyPostmodern = [
     label: 'sol 86',
   },
   {
-    href: 'http://diypostmodern.com/sweet',
+    href: 'https://diypostmodern.trevorlitsey.com/sweet',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sweet.gif',
     imgSrc:
@@ -131,7 +131,7 @@ exports.diyPostmodern = [
     label: 'sweet',
   },
   {
-    href: 'http://diypostmodern.com/sol289',
+    href: 'https://diypostmodern.trevorlitsey.com/sol289',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sol289.gif',
     imgSrc:
@@ -139,7 +139,7 @@ exports.diyPostmodern = [
     label: 'sol 289',
   },
   {
-    href: 'http://diypostmodern.com/r-mutt',
+    href: 'https://diypostmodern.trevorlitsey.com/r-mutt',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/r-mutt.png',
     imgSrc:
@@ -147,7 +147,7 @@ exports.diyPostmodern = [
     label: 'r. mutt',
   },
   {
-    href: 'http://diypostmodern.com/thisisnotasadboy',
+    href: 'https://diypostmodern.trevorlitsey.com/thisisnotasadboy',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/sadboy.png',
     imgSrc:
@@ -155,7 +155,7 @@ exports.diyPostmodern = [
     label: 'this is not a sad boy',
   },
   {
-    href: 'http://diypostmodern.com/ernst',
+    href: 'https://diypostmodern.trevorlitsey.com/ernst',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/ernst.gif',
     imgSrc:
@@ -163,7 +163,7 @@ exports.diyPostmodern = [
     label: 'ernst',
   },
   {
-    href: 'http://diypostmodern.com/gwon',
+    href: 'https://diypostmodern.trevorlitsey.com/gwon',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/gwon.gif',
     imgSrc:
@@ -174,7 +174,7 @@ exports.diyPostmodern = [
 
 exports.thisIsNotASadBoy = [
   {
-    href: 'http://thisisnotasadboy.trevorlitsey.com/ptrk',
+    href: 'https://thisisnotasadboy.trevorlitsey.com/ptrk',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/ptrk.gif',
     imgSrc:
@@ -183,7 +183,7 @@ exports.thisIsNotASadBoy = [
   },
 
   {
-    href: 'http://thisisnotasadboy.trevorlitsey.com/a-fair-amount-of-failures',
+    href: 'https://thisisnotasadboy.trevorlitsey.com/a-fair-amount-of-failures',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/a-fair-amount-of-failures.gif',
     imgSrc:
@@ -191,7 +191,7 @@ exports.thisIsNotASadBoy = [
     label: 'a fair amount of failures',
   },
   {
-    href: 'http://thisisnotasadboy.trevorlitsey.com/dotty',
+    href: 'https://thisisnotasadboy.trevorlitsey.com/dotty',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/dotty.gif',
     imgSrc:
@@ -199,7 +199,7 @@ exports.thisIsNotASadBoy = [
     label: 'dotty',
   },
   {
-    href: 'http://thisisnotasadboy.trevorlitsey.com/talky',
+    href: 'https://thisisnotasadboy.trevorlitsey.com/talky',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/talky.gif',
     imgSrc:
@@ -208,7 +208,7 @@ exports.thisIsNotASadBoy = [
   },
   {
     href:
-      'http://thisisnotasadboy.trevorlitsey.com/youmakemelaughbutitsnotfunny',
+      'https://thisisnotasadboy.trevorlitsey.com/youmakemelaughbutitsnotfunny',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/youmakemelaugh.gif',
     imgSrc:
@@ -216,7 +216,7 @@ exports.thisIsNotASadBoy = [
     label: 'you make me laugh but its not funny',
   },
   {
-    href: 'http://thisisnotasadboy.trevorlitsey.com/gray',
+    href: 'https://thisisnotasadboy.trevorlitsey.com/gray',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1525134507/trevorlitsey.com/gray.png',
     imgSrc:
@@ -254,7 +254,7 @@ exports.fun = [
 
 exports.freelance = [
   {
-    href: 'http://www.plays.gratis',
+    href: 'http://www.musicallaround.us',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/nob.gif',
     imgSrc:

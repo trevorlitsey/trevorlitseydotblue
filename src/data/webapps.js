@@ -20,14 +20,14 @@ const {
 
 module.exports = [
   {
-    href: 'http://www.grantcenter.io',
+    href: 'https://msp-bus-tracker.netlify.com/',
     placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1535398785/trevorlitsey.com/grantcenter.gif',
+      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528061749/trevorlitsey.com/msp-bus-tracker.gif',
     imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1535398785/trevorlitsey.com/grantcenter.gif',
-    title: 'GrantCenter.io',
-    description: `Software-as-a-service for non-profit grant applicants. Only tool of its kind that that offers an insightful workflow for managing grant application deadlines and metadata.`,
-    tech: [html, css, react, node, graphql, mongoDb, jest, cypress],
+      'https://res.cloudinary.com/sadness/image/upload/v1528061749/trevorlitsey.com/msp-bus-tracker.gif',
+    title: 'MspBusTracker.com',
+    description: `Single-page application for getting real-time bus departures from Minneapolis/St. Paul Metro Transit.`,
+    tech: [html, css, react, node],
   },
   {
     href: 'https://cashflow-calc.netlify.com/',
@@ -38,16 +38,6 @@ module.exports = [
     title: 'CashflowCalc.net',
     description: `Serverless single-page application for making cashflow projections. Draft and edit budgets in realtime with coworkers.`,
     tech: [html, css, react, firebase, webpack, jest, cypress],
-  },
-  {
-    href: 'https://msp-bus-tracker.netlify.com/',
-    placeholderImgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528061749/trevorlitsey.com/msp-bus-tracker.gif',
-    imgSrc:
-      'https://res.cloudinary.com/sadness/image/upload/v1528061749/trevorlitsey.com/msp-bus-tracker.gif',
-    title: 'MspBusTracker.com',
-    description: `Single-page application for getting real-time bus departures from Minneapolis/St. Paul Metro Transit.`,
-    tech: [html, css, react, node],
   },
   {
     href: 'https://youtube-analyzer.now.sh',
