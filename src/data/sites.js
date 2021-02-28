@@ -234,7 +234,7 @@ exports.fun = [
     label: 'good not good',
   },
   {
-    href: 'https://textmewhengustweets.litseyt.me',
+    href: 'https://text-me-when-gus-tweets.netlify.app',
     placeholderImgSrc:
       'https://res.cloudinary.com/sadness/image/upload/h_1,w_1/v1528057225/trevorlitsey.com/text-me-when-gus-tweets.png',
     imgSrc:
